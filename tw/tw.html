@@ -1,0 +1,241 @@
+<!DOCTYPE htm lPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <style>
+
+        html {box-sizing: border-box; font-size: 14px; line-height: 1.4}
+        *, *:before, *:after {box-sizing: inherit;}
+        .cf:before,.cf:after, section:before, section:after{ content: " ";display: table; }
+        .cf:after, section:after {clear: both;}
+        img {max-width: 100%; height: auto}
+        h1, h2, h3 {margin: 0}
+        h1 {font-size: 40px}
+        h2 {font-size: 30px}
+        button, input {
+            background: white;
+            border: 1px solid black;
+            padding: 10px 15px
+        }
+        select {flex-grow: 1; padding: 2px 0}
+        .flexdisplay {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        .inline {list-style-type: none; display: inline; font-weight: 600; padding: 0; font-size: 16px}
+        .inline li { display: inline; padding: 0 10px}
+        .text-center {text-align: center}
+        .white {color: white}
+        .wrap {margin: 0 auto; display: block; max-width: 600px}
+        header, .search {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search {font-weight: 600; font-size: 12px}
+        .search > * {margin: 0 5px}
+        .event {width: 100%;height: auto}
+        .event h1 {font-weight: 100}
+        .event__img {float: left;width: 50%}
+        .event__detail {float: right; padding: 10px; padding-left: 50px; width: 50%}
+        .event__detail h1 {font-size: 30px}
+        .header__icon {fill:black; height:20px; width: 20px; transform: rotate(90deg)}
+        .search__icon {fill: #aaa; height: 20px; width: 20px; border: 1px solid #aaa; padding: 4px; border-radius: 50%}
+        .footer__icon {fill: black; height: 30px; width: 30px; margin: 0 15px}
+
+    </style>
+</head>
+
+<div class="wrap">
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+     
+        <header class="flexdisplay">
+        <img src="img/1036.1405279088.png" class="logo" width="150px">
+            <nav>
+                <ul class="inline">
+                    <li>Home</li>
+                    <li>Featured</li>
+                    <li>Pages</li>
+                </ul>
+            </nav>
+            
+
+<svg class="header__icon"><use xlink:href="inc/symbol-defs.svg#icon-flickr"></use></svg>
+        </header>
+        
+        <main>
+        <section>
+            <div style="position:relative">
+            <img src="img/slider.jpg">
+                <button style="position: absolute; bottom: 30px; right: 40%">Watch Video</button>
+                <button  style="position: absolute; bottom: 30px; right: 15%">Get Tickets</button>
+            </div>
+        </section>
+        
+        <section>    
+            <div class="text-center" style="padding:15px 0">
+                <em>Be on the Inside</em><br />
+                <h2>GET ON THE LIST</h2>
+                Be the first of your friends to be in the know with our exclusive events newsletter.<br /><br />
+                <input type="email" placeholder="Your email address"> <button type="submit">Sign Up</button>
+            </div>
+        </section>
+            
+        <section id="section-eventsliders">    
+           <div style="position: relative;" class="text-center white">
+                <img src="img/600x350.jpg">
+               <div style="position: absolute; bottom: 10px; right: 0; left: 0">
+                   <h1>ZAC BROWN BAND</h1>
+                   <h2>feat. Chris Stapleton</h2>
+                </div>
+            </div>
+            
+            <div style="position: relative;" class="text-center white">
+                <img src="img/600x350.jpg">
+               <div style="position: absolute; bottom: 10px; right: 0; left: 0">
+                   <h1>ANOTHER GUY</h1>
+                </div>
+            </div>
+        </section>
+            
+        <section id="section-eventlist">
+            <div class="flexdisplay search" style="padding: 5px 0">
+                <svg class="search__icon"><use xlink:href="inc/symbol-defs.svg#icon-filter"></use></svg>
+                Genre: 
+                <select name="genre">
+                  <option value="volvo">Pop</option>
+                  <option value="saab">Rock</option>
+                  <option value="mercedes">Rap</option>
+                  <option value="audi">Country</option>
+                </select>
+                
+                Subgenre: 
+                <select name="subgenre">
+                  <option value="volvo">Pop</option>
+                  <option value="saab">Rock</option>
+                  <option value="mercedes">Rap</option>
+                  <option value="audi">Country</option>
+                </select>
+                
+                <button style="padding: 5px 10px">Find Events</button>
+            </div>
+            
+            <div class="event cf">
+                <img src="img/300x300.jpg" class="event__img">
+                <div class="event__detail">
+                    <em>Rapgame entertainment presents</em>
+                    <h1>CURREN$Y</h1>
+                    CRUISIN' USA TOUR 2016
+                    <p>
+                        <strong>Monday, June 6</strong><br />
+                        Doors: 7:00pm / Show: 8:00pm<br />
+                        The Observatory North Park<br />
+                        Santa Ana, CA <br />
+                        <em>Ages 21 and up</em>
+                    </p>
+                    <button>DETAILS</button>
+                </div>
+            </div>
+            
+            <div class="event cf">
+                <img src="img/300x300.jpg" class="event__img">
+                <div class="event__detail">
+                    <em>Rapgame entertainment presents</em>
+                    <h1>BADFISH</h1>
+                   A TRIBUTE TO SUBLIME
+                    <p>
+                        <strong>Tuesday, June 7</strong><br />
+                        Doors: 7:00pm / Show: 8:00pm<br />
+                        The Observatory North Park<br />
+                        Santa Ana, CA <br />
+                        <em>Ages 21 and up</em>
+                    </p>
+                    <button>DETAILS</button>
+                </div>
+            </div>
+            
+            <div class="event cf">
+                <img src="img/300x300.jpg" class="event__img">
+                <div class="event__detail">
+                    <em>Rapgame entertainment presents</em>
+                    <h1>NOTORIOUS B.I.G.</h1>
+                   FEATURING 2PAC &AMP; NAS
+                    <p>
+                        <strong>Tuesday, June 7</strong><br />
+                        Doors: 7:00pm / Show: 8:00pm<br />
+                        The Observatory North Park<br />
+                        Santa Ana, CA <br />
+                        <em>Ages 21 and up</em>
+                    </p>
+                    <button>DETAILS</button>
+                </div>
+            </div>
+            <button style="float:right">View more Events</button>
+        </section>
+            
+        <section>
+            <div class="text-center">
+                <em>Discover new music &amp; food</em>
+                <h1>LIVE IT UP</h1>
+                <p style="padding: 0 50px; line-height: 1.8; font-size: 14px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in lobortis eros. Etiam tincidunt velit at hendrerit tristique. Etiam in dignissim massa. Vestibulum eget eleifend odio. Integer eros mauris, condimentum eu arcu nec, rhoncus fringilla nibh. </p>
+            </div>
+            
+        </section>
+            
+        </main>
+        
+        <footer class="text-center">
+            <h2>EXPLORE</h2>
+            <ul style="list-style-type:none; margin: 0; padding: 0">
+                <li>Home</li>
+                <li>Our Story</li>
+                <li>Events</li>
+                <li>Blog</li>
+                <li>Shortcodes</li>
+                <li>Demo</li>
+            </ul>
+            <br /><br />
+            <h2>HOURS</h2>
+            <p>Monday &ndash; Thursday<br />
+            11am to 11pm</p>
+            
+            <p>Friday &ndash; Sunday<br />
+                11am to 2am
+            </p>
+            
+            <img src="img/1036.1405279088.png">
+            <p>TicketWeb Venue Club and Bar<br />
+                11232 Promise Land St.<br />
+                New York City, NY 44043<br />
+                832.122.3215<br />
+                info@ticketwebvenue.com
+            </p>
+            
+            <svg class="footer__icon"><use xlink:href="inc/symbol-defs.svg#icon-facebook"></use></svg> 
+            <svg class="footer__icon"><use xlink:href="inc/symbol-defs.svg#icon-twitter"></use></svg>
+             <svg class="footer__icon"><use xlink:href="inc/symbol-defs.svg#icon-instagram"></use></svg>
+             <svg class="footer__icon"><use xlink:href="inc/symbol-defs.svg#icon-mail3"></use></svg>
+
+        </footer>
+        
+        
+    </body>
+</div>
+</html>
