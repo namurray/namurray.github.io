@@ -1,0 +1,79 @@
+//
+//!*VARIABLES*!
+//Declare your base styles to be reused through out components (buttons, links etc)
+//
+
+//COLORS
+
+$color-primary: rgba(127, 62, 155, 1); //purple
+$color-secondary: rgba(0, 113, 188, 1); //blue
+$color-tertiary: rgba(246, 142, 86, 1); //orange
+
+//TYPOGRAPHY
+
+//Import Local fonts 
+@font-face{
+font-family:"Montserrat Light";
+    src: url('../inc/fonts/Montserrat-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+font-family:"Montserrat Regular";
+    src: url('../inc/fonts/Montserrat-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+font-family:"Montserrat Bold";
+    src: url('../inc/fonts/Montserrat-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+//Import any Google fonts
+//@import url('');
+
+//Declare fonts, important to declare the BOLD version, even if it's same font!!!
+$font-primary: 'Montserrat Light', sans-serif;
+$font-primary--bold: 'Montserrat Bold';
+$font-secondary: 'Georgia', serif;
+
+//set strong and italic preference here
+em {
+    font-style: italic;
+}
+strong {
+    font-family: $font-primary--bold;
+    font-style: normal;
+    font-weight: 400
+}
+
+//
+//COMPONENTS
+//Use your variable values above or declare new values
+
+//Text and links
+
+//Forms and buttons
+$input-color: #ccc;
+$input-font: $font-secondary;
+    
+$button-email-font: $font-primary--bold;
+$button-email-color: black;
+
+
+// Header Elements & Navigation
+$header-position: static; //select fixed|static
+$header-direction: row; //select row|column
+
+$menu-position: 2; //if $header-direction = row: 1 for left, 2 for right; if column, 1 for top 2 for bottom
+$menu-font-family: $font-primary--bold; //select from variables or a new value
+$menu-font-size: 1.4rem; //use rems
+$menu-font-transform: uppercase; //select uppercase|none|lowercase
+$menu-link-color: #fff; //select from variables or a new value
+$menu-link-color--hover: $color-primary;
+
+$logo-position: 1; //if $header-direction = row: 1 for left, 2 for right; if column, 1 for top 2 for bottom
+
+//Buttons

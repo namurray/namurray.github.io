@@ -1,0 +1,137 @@
+//SECTIONS, GRID, FLOATS ETC
+
+//Breakpoints
+$break-small: 600px;
+$break-medium: 768px; 
+$break-large: 1200px;
+
+
+//LAYOUT HELPERS
+
+//Display
+
+@mixin flexdisplay {
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+//Floats & clears
+.float-left {float: left}
+.float-right {float: right}
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+
+//Alignment
+.align-center {display: block; margin: 0 auto}
+
+
+//SECTIONS
+
+.wrap {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: block
+}
+
+//Header
+
+header {
+    position: $header-position;
+    width: 100%;
+    @include flexdisplay;
+    flex-direction: $header-direction;
+    justify-content: space-between;
+    align-items: center
+}
+.header__logo {
+    max-width: 150px;
+    order: $logo-position;
+}
+
+////Nav
+nav {
+    order: $menu-position;
+}
+.mainmenu {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: opacity .25s ease-in-out;
+       -moz-transition: opacity .25s ease-in-out;
+        -ms-transition: opacity .25s ease-in-out;
+         -o-transition: opacity .25s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    &:hover {
+        opacity: 1;
+        z-index: 10;
+    }
+    @include breakpoint ($break-small){
+        position: inherit;
+        height: auto;
+        opacity: 1
+    }
+}
+
+.mainmenu__icon {   
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 200px;
+    text-align: right;
+    cursor: pointer;
+    &:hover + .mainmenu, &:focus + .mainmenu {
+        opacity: 1;
+        z-index: 10;
+    }
+    @include breakpoint ($break-small) {
+        display: none
+    }
+}
+
+//Footer
+
+footer {
+    @include flexdisplay;
+    flex-wrap: wrap;
+}
+.footerbox {
+    width: 100%;
+    &--1 {order: 1}
+    &--2 {order: 2}
+    &--3 {order: 3}
+   @include breakpoint($break-small) {
+        width: 33%;
+        &--1 {order: 3}
+        &--3 {order: 1}
+    }
+}
+
+//Sections
+
+#section--topslider {
+    position: relative;
+    top: -50px;
+    z-index: -1;
+    margin-bottom: -50px
+}
+
+#section--mailinglist {
+   @include flexdisplay;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    padding-bottom: 30px;
+}
+.mailinglist__input {text-align: right}

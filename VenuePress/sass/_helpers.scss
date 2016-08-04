@@ -1,0 +1,18 @@
+//Lists
+
+.list-nostyle {
+    list-style-type: none
+}
+
+//Text
+
+.text-center {text-align: center}
+.text-left {text-align: left}
+.text-justify {text-align: justify}
+.text-reader-only {//for screen readers
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+} 
+.text-fancy {font-family: $font-secondary; font-style: italic}
+.text-emph {font-family: $font-primary--bold; font-size: 2em; text-transform: uppercase}

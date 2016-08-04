@@ -1,0 +1,53 @@
+//Uses variables from _theme.scss
+
+html {
+    font-family: $font-primary;
+    font-weight: normal
+}
+
+section {
+}
+//HEADER & MAIN MENU
+
+.mainmenu {
+    list-style-type: none;
+    li {
+        font-family: $menu-font-family;
+        font-size: $menu-font-size;
+        text-transform: $menu-font-transform;
+        padding: 0 1em;
+        a:link, a:visited {
+            color: $menu-link-color;
+        }
+        a:hover {
+            color: $menu-link-color--hover
+        }
+        @include breakpoint ($break-small) {
+           display: inline-block; 
+        }
+    }
+}
+
+//COMPONENTS
+
+//Forms & Buttons
+
+input {
+    background-color: $input-color;
+    padding: 5px 10px;
+    font-family: $input-font;
+    font-style: italic
+}
+input[type='email']{
+    padding: 20px 10px;
+    margin-right: 5px;
+    width: 300px
+}
+
+.email__button {
+    font-family: $button-email-font;
+    color: $button-email-color;
+    font-size: 18px;
+    padding: 18px 10px;
+    background-color: white
+}
