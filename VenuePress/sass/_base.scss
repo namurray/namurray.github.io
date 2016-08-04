@@ -16,6 +16,7 @@ section {
         font-size: $menu-font-size;
         text-transform: $menu-font-transform;
         padding: 0 1em;
+        text-align: right;
         a:link, a:visited {
             color: $menu-link-color;
         }
@@ -26,6 +27,12 @@ section {
            display: inline-block; 
         }
     }
+}
+
+.mainmenu__icon > svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
 }
 
 //COMPONENTS
