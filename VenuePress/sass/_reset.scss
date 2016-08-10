@@ -9,7 +9,7 @@
 html {
     font-family: sans-serif; /* 1 */
     font-size:  62.5%;
-  line-height: 1.15; /* 2 */
+  line-height: 1.5; /* 2 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
     box-sizing: border-box;
@@ -24,7 +24,7 @@ html {
 
 body {
   margin: 0;
-    font-size: 1.4em
+    font-size: 1.5em
 }
 
 /* HTML5 display definitions
@@ -317,7 +317,6 @@ html [type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; /* 2 */
-    text-transform: uppercase
 }
 
 /**
@@ -441,4 +440,6 @@ dt, dd
     margin: 0; 
     padding: 0;
 }
-
+li img {
+    vertical-align:bottom;
+}

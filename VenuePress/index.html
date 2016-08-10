@@ -35,30 +35,69 @@
         <main role="main">
     
             <section id="section--topslider">
-                <img src="img/1800x1200.jpg" />
+                <div class="topslider">
+                    
+                </div>
             </section>
         
-            <section id="section--mailinglist" style="background: #aaa">
+            <section id="section--mailinglist">
                 <h1 class="text-reader-only">join the mailing list</h1>
-                <div>
+                <div class="mailinglist__text">
                     <span class="text-fancy">Be on the inside</span> <br />
                     <span class="text-emph">Get on the list</span><br />
                     Be the first of your friends to be in the know with our exclusive event newsletter.
                 </div>
                 <div class="mailinglist__input">
-                    <input type="email" placeholder="Your email address" /><button class="email__button">Sign Up</button>
+                    <input type="email" placeholder="Your email address" /><button class="button button--fancy--light">Sign Up</button>
                     </div>
             </section>
             
-            <section id="section--eventslides">
-                <em>afheuh a</em>
-                <strong>efaieh <em>wuaeugh</em> afheuh a</strong>
-                efaieh wuaeugh 
+            <section id="section--eventsfeatured">
+                <h1 class="text-reader-only">featured events</h1>
+                <ul>
+                    
+                <li class="eventsfeatured__event">
+                    <img src="img/685x515.jpg" />
+                    <hgroup class="eventsfeatured__title">
+                        <h2 class="eventsfeatured__event-title">Zac Brown Band</h2>
+                        <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
+                    </hgroup>
+                </li>
+                <li class="eventsfeatured__event">
+                    <img src="img/685x515.jpg" />
+                    <hgroup class="eventsfeatured__title">
+                        <h2 class="eventsfeatured__event-title">P!NK</h2>
+                        <h2 class="eventsfeatured__event-title--sub">with Alabama Shakes</h2>
+                    </hgroup>
+                </li>
+                </ul>
+                
+                <div class="eventsfeatured__event--small"><img src="img/685x515.jpg" /></div>
+                <div class="eventsfeatured__event--small"><img src="img/685x515.jpg" /></div>  
+                <div class="eventsfeatured__event--small"><img src="img/685x515.jpg" /></div>  
             </section>
             
             <section id="section--eventsearch">
-afheuh a
-                efaieh wuaeugh 
+                <h1 class="text-reader-only">search and filter events</h1>
+                <label for="genre">Genre:</label> 
+                <select name="genre" id="genre">
+                  <option value="volvo">Pop</option>
+                  <option value="saab">Rock</option>
+                  <option value="mercedes">Rap</option>
+                  <option value="audi">Country</option>
+                </select>
+                
+                <label for="subgenre">Subgenre:</label> 
+                <select name="subgenre" id="subgenre">
+                  <option value="volvo">Pop</option>
+                  <option value="saab">Rock</option>
+                  <option value="mercedes">Rap</option>
+                  <option value="audi">Country</option>
+                </select>
+                <button type="submit" class="button button--light">Find Events</button>
+                
+                <input type="search" />
+                <button type="submit" class="button button--light">Search</button>
             </section>
             
             <section id="section--customcontent">

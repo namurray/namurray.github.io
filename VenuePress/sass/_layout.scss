@@ -53,7 +53,12 @@ header {
 }
 .header__logo {
     max-width: 150px;
-    order: $logo-position;
+    @if $menu-position == 1 {
+        order: 2
+    } @else {
+        order: 1
+    }
+        
 }
 
 ////Nav
@@ -63,23 +68,15 @@ nav {
 .mainmenu {
     position: absolute;
     top: 40px;
-    right: 10px;
-    height: 1px;
-    opacity: 0;
-    z-index: -1;
-    -webkit-transition: opacity .25s ease-in-out;
-       -moz-transition: opacity .25s ease-in-out;
-        -ms-transition: opacity .25s ease-in-out;
-         -o-transition: opacity .25s ease-in-out;
-    transition: opacity 1s ease-in-out;
-    &:hover {
-        opacity: 1;
-        z-index: 10;
+    
+    @if $menu-position == 1 {
+        left: 10px;
+    } @else {
+        right: 10px;
     }
+    
     @include breakpoint ($break-small){
         position: inherit;
-        height: auto;
-        opacity: 1
     }
 }
 
@@ -91,14 +88,11 @@ nav {
     width: 200px;
     text-align: right;
     cursor: pointer;
-    &:hover + .mainmenu, &:focus + .mainmenu {
-        opacity: 1;
-        z-index: 10;
-    }
     @include breakpoint ($break-small) {
         display: none
     }
 }
+
 
 //Footer
 
@@ -122,16 +116,50 @@ footer {
 
 #section--topslider {
     position: relative;
-    top: -50px;
+    top: -65px;
     z-index: -1;
-    margin-bottom: -50px
+    margin-bottom: -65px
 }
 
 #section--mailinglist {
    @include flexdisplay;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px 0;
     padding-bottom: 30px;
 }
+.mailinglist__text {
+    margin-right: 20px
+}
 .mailinglist__input {text-align: right}
+
+.eventsfeatured__event {
+    width: 100%;
+    position: relative;
+    @include breakpoint ($break-small) {
+        width: 50%;
+        float: left
+    }
+}
+.eventsfeatured__event--small {
+    widows: 100%;
+    @include breakpoint ($break-small) {
+        width: 33.333%;
+        float: left
+    }
+}
+.eventsfeatured__title {
+    position: absolute;
+    bottom: 0;
+    padding: 2em 0;
+    text-align: center
+}
+
+#section--eventsearch {
+    width: 100%;
+    @include flexdisplay;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em 0;
+}

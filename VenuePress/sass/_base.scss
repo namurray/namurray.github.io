@@ -5,8 +5,14 @@ html {
     font-weight: normal
 }
 
-section {
+//HEADERS, TEXT ETC
+
+h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-family: $font-primary--bold
 }
+
 //HEADER & MAIN MENU
 
 .mainmenu {
@@ -34,8 +40,33 @@ section {
     width: 30px;
     height: 30px;
 }
-
+//SECTIONS & PAGES
+#section--mailinglist {
+    background-color: #aaa
+}
+#section--eventsearch {
+    background-color: #eee;
+}
+.eventsfeatured__title {
+    color: #fff;
+    text-align: center;
+    width: 100%
+}
+.eventsfeatured__event-title--sub {
+    font-size: 2em;
+    font-family: $font-primary;
+    text-transform: none
+}
 //COMPONENTS
+
+//Slider
+
+.topslider {
+    widows: 100%;
+    background-image: url(../img/1210x530.jpg);
+    background-size: cover;
+    height: 550px
+}
 
 //Forms & Buttons
 
@@ -50,11 +81,38 @@ input[type='email']{
     margin-right: 5px;
     width: 300px
 }
+select {
+    background: $input-color;
+    width: 200px;
+    padding: .4em;
+    font-size: .9em;
+    font-family: $font-primary--bold
+}
+label {
+    font-family: $font-primary--bold
+}
 
-.email__button {
-    font-family: $button-email-font;
-    color: $button-email-color;
-    font-size: 18px;
-    padding: 18px 10px;
-    background-color: white
+.button {
+    padding: .5em 1em;
+    display: inline-block;
+    background-color: $button-color--standard;
+    color: $button-text-color;
+    text-transform: uppercase;
+        font-family: $font-primary--bold;
+    &--standard {
+    }
+    &--light {
+        font-family: $font-primary;
+        text-transform: none
+    }
+    &--fancy--light {
+            font-size: 1.6em;
+             background-color: rgba(0, 0, 0, .4);
+            color: #000
+        }
+    &--fancy--dark {
+        font-size: 1.6em;
+        background-color: rgba(255, 255, 255, .8);
+        color: #fff
+    }
 }
