@@ -2,15 +2,41 @@
 
 html {
     font-family: $font-primary;
-    font-weight: normal
+    font-weight: normal;
+    color: $color-text;
 }
 
-//HEADERS, TEXT ETC
-
-h2 {
-    font-size: 2.5em;
+//HEADERS, TEXT, LINKS
+h1, .h1 {
+    font-size: 4.236em;
     text-transform: uppercase;
-    font-family: $font-primary--bold
+    font-family: $header-font;
+}
+h2, .h2 {
+    font-size: 2.618em;
+    text-transform: uppercase;
+    font-family: $header-font;
+}
+h3, .h3 {
+    font-size: 1.618em;
+    font-family: $header-font;
+}
+.text-fancy {
+    font-family: $font-secondary;
+    font-size: 1.5em;
+    font-style: italic
+}
+.text-emph {
+    font-family: $font-primary--bold; 
+    font-size: 2em; 
+    text-transform: uppercase
+}
+
+a:link, a:visited {
+    color: $link-color
+}
+a:hover {
+   color: $link-color--hover
 }
 
 //HEADER & MAIN MENU
@@ -57,6 +83,35 @@ h2 {
     font-family: $font-primary;
     text-transform: none
 }
+
+#section--eventlist {
+    color: lighten( $color-text, 40% );
+    li {
+        display: block;
+        clear: both
+    }
+}
+.eventlist__title__presents {
+    font-family: $font-secondary;
+    font-style: italic
+}
+.eventlist__title__act {
+    text-transform: uppercase;
+    font-size: 2.618em
+}
+.eventlist__title__subtitle {
+    font-family: $font-primary--bold;
+    text-transform: uppercase;
+    color: lighten( $color-text, 60% )
+}
+.eventlist__details__venue, .eventlist__details__city {
+    color: lighten($color-secondary, 10%);
+    font-family: $font-primary--bold
+}
+.eventlist__details__note {
+    font-style: italic;
+    font-size: .8em
+}
 //COMPONENTS
 
 //Slider
@@ -72,19 +127,14 @@ h2 {
 
 input {
     background-color: $input-color;
-    padding: 5px 10px;
-    font-family: $input-font;
+    padding: .5em 10px;
     font-style: italic
 }
-input[type='email']{
-    padding: 20px 10px;
-    margin-right: 5px;
-    width: 300px
-}
+
 select {
     background: $input-color;
     width: 200px;
-    padding: .4em;
+    padding: .7em;
     font-size: .9em;
     font-family: $font-primary--bold
 }
@@ -98,8 +148,9 @@ label {
     background-color: $button-color--standard;
     color: $button-text-color;
     text-transform: uppercase;
-        font-family: $font-primary--bold;
-    &--standard {
+    font-family: $font-primary--bold;
+    &--higlight {
+        background-color: lighten($button-color--standard, 50%);
     }
     &--light {
         font-family: $font-primary;

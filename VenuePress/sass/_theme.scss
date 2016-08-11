@@ -5,6 +5,7 @@
 
 //COLORS
 
+$color-text: rgba(0 , 0 ,0 , 1); //black
 $color-primary: rgba(127, 62, 155, 1); //purple
 $color-secondary: rgba(0, 113, 188, 1); //blue
 $color-tertiary: rgba(246, 142, 86, 1); //orange
@@ -34,7 +35,7 @@ font-family:"Montserrat Bold";
 //Import any Google fonts
 //@import url('');
 
-//Declare fonts, important to declare the BOLD version, even if it's same font!!!
+//Declare fonts
 $font-primary: 'Montserrat Light', sans-serif;
 $font-primary--bold: 'Montserrat Bold';
 $font-secondary: 'Georgia', serif;
@@ -55,9 +56,13 @@ strong {
 
 //Text and links
 
+$header-font: $font-primary--bold;
+
+$link-color: $color-secondary;
+$link-color--hover: $color-secondary;
+
 //Forms and buttons
 $input-color: #ddd;
-$input-font: $font-secondary;
 
 $button-color--standard: $color-secondary;
 $button-color--special: $color-tertiary;

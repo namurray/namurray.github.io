@@ -1,9 +1,11 @@
 //SECTIONS, GRID, FLOATS ETC
 
 //Breakpoints
+$break-xsmall: 500px;
 $break-small: 600px;
-$break-medium: 768px; 
-$break-large: 1200px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-xlarge: 1200px;
 
 
 //LAYOUT HELPERS
@@ -19,6 +21,7 @@ $break-large: 1200px;
 
 //Floats & clears
 .float-left {float: left}
+
 .float-right {float: right}
 .cf:before,
 .cf:after {
@@ -27,6 +30,13 @@ $break-large: 1200px;
 }
 .cf:after {
     clear: both;
+}
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 //Alignment
@@ -107,7 +117,8 @@ footer {
     &--3 {order: 3}
    @include breakpoint($break-small) {
         width: 33%;
-        &--1 {order: 3}
+        &--1 {order: 2}
+        &--2 {order: 3}
         &--3 {order: 1}
     }
 }
@@ -121,6 +132,7 @@ footer {
     margin-bottom: -65px
 }
 
+//Section: Mailing List
 #section--mailinglist {
    @include flexdisplay;
     justify-content: center;
@@ -128,12 +140,41 @@ footer {
     flex-wrap: wrap;
     padding: 20px 0;
     padding-bottom: 30px;
+    div {
+        width: 100%;
+        padding: 0 1em;
+        @include breakpoint ($break-medium){
+            width: 45%;
+            padding: 0
+        }
+    }
 }
 .mailinglist__text {
-    margin-right: 20px
+    text-align: center;
+    margin-bottom: 1.168em;
+    @include breakpoint ($break-medium) {
+        text-align: left;
+        margin-bottom: 0
+    }
 }
-.mailinglist__input {text-align: right}
+.mailinglist__input {
+    text-align: right;
+    button {
+        width: 100%;
+        @include breakpoint ($break-medium){
+                width: auto
+        }
+    }
+    input {
+        padding: 20px 10px;
+        width: 100%;
+        @include breakpoint ($break-medium){
+                width: 400px
+        }
+    }
+}
 
+//Section: Featured Events
 .eventsfeatured__event {
     width: 100%;
     position: relative;
@@ -156,10 +197,77 @@ footer {
     text-align: center
 }
 
+//Section: Event Search
 #section--eventsearch {
     width: 100%;
     @include flexdisplay;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 1.5em 0;
+    div {
+        width: 95%;
+        &:first-of-type {
+            @include breakpoint ($break-large) {
+                width: 60%;
+                text-align: center;
+            }
+        }
+        &:last-of-type {
+            @include breakpoint ($break-large) {
+                width: 40%
+            }
+        }
+    }
+    input {
+        width: 100%;
+        margin: 1em 0;
+        @include breakpoint ($break-medium) {
+            width: 80%
+        }
+    }
+    select {
+        margin: .5em 0
+    }
+}
+.eventsearch__filter > form {
+    clear: both;
+    width: 100%;
+    display: block;
+    @include breakpoint ($break-small) {
+        display: inline;
+    }
+}
+.eventsearch__button {
+   width: 100%;
+    @include breakpoint ($break-medium) {
+        width: auto
+    }
+   
+}
+
+//Section: Event Listings
+#section--eventlist {
+    @include clearfix;
+    span {
+        display: block;
+        @include clearfix
+    }
+    div {
+        float: left
+    }
+}
+.eventlist__img {
+    @include breakpoint ($break-xsmall){
+        max-width: 40%
+      }
+}
+.eventlist__details {
+    margin: .618em 0;
+     @include breakpoint ($break-small){
+         margin: 0
+     }
+}
+.eventlist__details__date {
+    font-family: $font-primary
 }

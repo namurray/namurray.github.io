@@ -10,9 +10,27 @@
 .text-left {text-align: left}
 .text-justify {text-align: justify}
 .text-reader-only {//for screen readers
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 } 
-.text-fancy {font-family: $font-secondary; font-style: italic}
-.text-emph {font-family: $font-primary--bold; font-size: 2em; text-transform: uppercase}
+.is-super{margin-bottom: -.5em}
+.is-sub {margin-top: -.2em}
+
+//States
+
+.hide-sm {
+    display: none;
+    @include breakpoint ($break-small) {
+        display: inline-block
+    }
+}
+.hide-md {
+    display: none;
+     @include breakpoint ($break-medium) {
+        display: inline-block
+     }
+}

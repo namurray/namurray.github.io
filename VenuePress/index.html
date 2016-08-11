@@ -79,29 +79,96 @@
             
             <section id="section--eventsearch">
                 <h1 class="text-reader-only">search and filter events</h1>
-                <label for="genre">Genre:</label> 
-                <select name="genre" id="genre">
-                  <option value="volvo">Pop</option>
-                  <option value="saab">Rock</option>
-                  <option value="mercedes">Rap</option>
-                  <option value="audi">Country</option>
-                </select>
-                
-                <label for="subgenre">Subgenre:</label> 
-                <select name="subgenre" id="subgenre">
-                  <option value="volvo">Pop</option>
-                  <option value="saab">Rock</option>
-                  <option value="mercedes">Rap</option>
-                  <option value="audi">Country</option>
-                </select>
-                <button type="submit" class="button button--light">Find Events</button>
-                
-                <input type="search" />
-                <button type="submit" class="button button--light">Search</button>
+                <div class="eventsearch__filter">
+                    <form>
+                        <label for="genre">Genre:</label> 
+                        <select name="genre" id="genre">
+                          <option value="volvo">Pop</option>
+                          <option value="saab">Rock</option>
+                          <option value="mercedes">Rap</option>
+                          <option value="audi">Country</option>
+                        </select>
+                    </form>
+                    <form>
+                        <label for="subgenre">Subgenre:</label> 
+                        <select name="subgenre" id="subgenre">
+                          <option value="volvo">Pop</option>
+                          <option value="saab">Rock</option>
+                          <option value="mercedes">Rap</option>
+                          <option value="audi">Country</option>
+                        </select>
+                        <button type="submit" class="button button--light eventsearch__button">Find Events</button>
+                    </form>
+                </div>
+                <div class="eventsearch__search">
+                    <input type="search" />
+                    <button type="submit" class="button button--light eventsearch__button">Search</button>
+                </div>
+            </section>
+            <section>
+                <h1 class="text-reader-only">Event Listing</h1>
+                <ul id="section--eventlist">
+                    <li>
+                        <div class="eventlist__img"><img src="img/685x515.jpg"></div>
+                        <div class="eventlist__title">
+                            <span class="eventlist__title__presents is-super">Rapgame Entertainment Presents:</span>
+                            <span class="eventlist__title__act">Curren$y</span>
+                            <span class="eventlist__title__subtitle is-sub">Cruis'n USA Tour 2016</span>
+                        </div>
+                        <div class="eventlist__details">
+                            <span class="eventlist__details__date">Monday, June 6</span>
+                            <span class="eventlist__details__time">Doors: 7:00pm / Show: 8:00pm</span>
+                            <span class="eventlist__details__venue">The Observatory at North Park</span>
+                            <span class="eventlist__details__city">Santa Ana, CA</span>
+                            <span class="eventlist__details__note">Ages 21 and up</span>
+                        </div>
+                        <div class="eventlist__button">
+                            <button class="button button--higlight">Details</button>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="eventlist__img"><img src="img/685x515.jpg"></div>
+                        <div class="eventlist__title">
+                            <span class="eventlist__title__presents is-super">Rapgame Entertainment Presents:</span>
+                            <span class="eventlist__title__act">Curren$y</span>
+                            <span class="eventlist__title__subtitle is-sub">Cruis'n USA Tour 2016</span>
+                        </div>
+                        <div class="eventlist__details">
+                            <span class="eventlist__details__date">Monday, June 6</span>
+                            <span class="eventlist__details__time">Doors: 7:00pm / Show: 8:00pm</span>
+                            <span class="eventlist__details__venue">The Observatory at North Park</span>
+                            <span class="eventlist__details__city">Santa Ana, CA</span>
+                            <span class="eventlist__details__note">Ages 21 and up</span>
+                        </div>
+                        <div class="eventlist__button">
+                            <button class="button">Details</button>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="eventlist__img"><img src="img/685x515.jpg"></div>
+                        <div class="eventlist__title">
+                            <span class="eventlist__title__presents is-super">Rapgame Entertainment Presents:</span>
+                            <span class="eventlist__title__act">Curren$y</span>
+                            <span class="eventlist__title__subtitle is-sub">Cruis'n USA Tour 2016</span>
+                        </div>
+                        <div class="eventlist__details">
+                            <span class="eventlist__details__date">Monday, June 6</span>
+                            <span class="eventlist__details__time">Doors: 7:00pm / Show: 8:00pm</span>
+                            <span class="eventlist__details__venue">The Observatory at North Park</span>
+                            <span class="eventlist__details__city">Santa Ana, CA</span>
+                            <span class="eventlist__details__note">Ages 21 and up</span>
+                        </div>
+                        <div class="eventlist__button">
+                            <button class="button">Details</button>
+                        </div>
+                    </li>
+                </ul>
             </section>
             
             <section id="section--customcontent">
-                <em>Discover new music and food</em>
+                <span class="text-fancy is-super">Discover new music and food</span>
                 <h1>Live It Up</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat, dui vitae venenatis sodales, libero nisl mattis enim, non ultrices justo justo ac nibh. Morbi vel neque condimentum, mattis mauris nec, ultrices leo. Etiam vitae urna vel dolor tempor tincidunt. Vestibulum feugiat ex et ultricies efficitur. Nam mollis lectus eu tincidunt cursus.</p>
             </section>
@@ -111,7 +178,7 @@
         <footer itemscope itemtype="http://schema.org/MusicVenue">
             
             <div class="footerbox footerbox--1">
-                <h1>Explore</h1>
+                <h1 class="h3">Explore</h1>
                 <ul class="list-nostyle">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -123,7 +190,7 @@
             </div>
             
             <div class="footerbox footerbox--2">
-                <h1>Hours</h1>
+                <h1 class="h3">Hours</h1>
                  <span itemprop="openingHours" content="Mo,Tu,We,Th 11:00-23:00">
                      <dl>
                      <dt>Monday &ndash; Thursday</dt>
@@ -139,7 +206,7 @@
             </div>
             
             <div class="footerbox footerbox--3">
-                [logo]<br />
+                <img src="inc/twlogo_whiteonblack.gif" width="50%" /> <br />
                 <span itemprop="name">TicketWeb Venue Club and Bar</span><br />
                 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                     <span itemprop="streetAddress">11232 Promiseland St.</span><br />
