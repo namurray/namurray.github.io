@@ -175,14 +175,50 @@ footer {
 }
 
 //Section: Featured Events
+.eventsfeatured {
+    @include flexdisplay;
+    flex-wrap: wrap;
+    min-height: 100%
+}
 .eventsfeatured__event {
     width: 100%;
     position: relative;
+    height: 500px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
     @include breakpoint ($break-small) {
         width: 50%;
+        height: 500px; 
         float: left
     }
+    &:hover .eventsfeatured__event__hidden {
+        height: 500px;
+        background-color: rgba($color-primary,.8);
+    }
+    &:hover .eventsfeatured__title {
+        transform: translate(0, -300px);
+    }
 }
+.eventsfeatured__event__hidden {
+    overflow-y: hidden;
+    position: absolute;
+    bottom: 0;
+ 
+    width: 100%;
+    margin: auto;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    & > hgroup {
+        margin-bottom: 1rem;
+        margin-top: 2.618rem;
+    }
+}
+
 .eventsfeatured__event--small {
     widows: 100%;
     @include breakpoint ($break-small) {
@@ -190,12 +226,7 @@ footer {
         float: left
     }
 }
-.eventsfeatured__title {
-    position: absolute;
-    bottom: 0;
-    padding: 2em 0;
-    text-align: center
-}
+
 
 //Section: Event Search
 #section--eventsearch {

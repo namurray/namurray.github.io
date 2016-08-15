@@ -11,7 +11,13 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+        <script>
+            var height = $("#test").height();
+            alert(".height(): " + div.height() );
+
+        </script>
     </head>
     <body>
         <div class="wrap">
@@ -54,21 +60,32 @@
             
             <section id="section--eventsfeatured">
                 <h1 class="text-reader-only">featured events</h1>
-                <ul>
+                <ul class="eventsfeatured">
                     
-                <li class="eventsfeatured__event">
-                    <img src="img/685x515.jpg" />
-                    <hgroup class="eventsfeatured__title">
-                        <h2 class="eventsfeatured__event-title">Zac Brown Band</h2>
-                        <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
-                    </hgroup>
+                <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                    <div id="test" class="eventsfeatured__event__hidden" style="height: auto;">
+                         <hgroup>
+                            <h2 class="eventsfeatured__event-title">Zac Brown BandBand Band Band</h2>
+                            <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
+                        </hgroup>
+                        <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
+                        <span class="eventsfeatured__event__venue">American Airlines Center</span>
+                        <span class="eventsfeatured__event__city">Dallas, TX</span>
+                        <button class="button button--emphasis">Details</button>
+                    </div>
+                   
                 </li>
-                <li class="eventsfeatured__event">
-                    <img src="img/685x515.jpg" />
-                    <hgroup class="eventsfeatured__title">
-                        <h2 class="eventsfeatured__event-title">P!NK</h2>
-                        <h2 class="eventsfeatured__event-title--sub">with Alabama Shakes</h2>
-                    </hgroup>
+                <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                    <div class="eventsfeatured__event__hidden">
+                        <hgroup>
+                            <h2 class="eventsfeatured__event-title">P!NK</h2>
+                            <h2 class="eventsfeatured__event-title--sub">with Alabama Shakes</h2>
+                        </hgroup>
+                        <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
+                        <span class="eventsfeatured__event__venue">American Airlines Center</span>
+                        <span class="eventsfeatured__event__city">Dallas, TX</span>
+                        <button class="button button--emphasis">Details</button>
+                    </div>
                 </li>
                 </ul>
                 

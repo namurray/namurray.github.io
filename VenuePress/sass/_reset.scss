@@ -437,9 +437,7 @@ textarea {
 ol, ul,
 dt, dd
 {
+    list-style-type: none;
     margin: 0; 
     padding: 0;
-}
-li img {
-    vertical-align:bottom;
 }
