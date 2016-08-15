@@ -198,9 +198,7 @@ footer {
         height: 500px !important;
         background-color: rgba($color-primary,.8);
     }
-    &:hover .eventsfeatured__title {
-        transform: translate(0, -300px);
-    }
+    
 }
 .eventsfeatured__event__hidden {
     overflow-y: hidden;
