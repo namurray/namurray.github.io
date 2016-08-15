@@ -16,7 +16,7 @@
         <script>
             //sets height for homepage featured events hidden details
          $(document).ready(function () {
-             $( "div.eventsfeatured__event__hidden" ).each(function(){
+             $( ".eventsfeatured__event__hidden" ).each(function(){
                 var contentHeight = $(this).children('.hgroup--eventsfeatured__event-title').height();
                  $(this).css({height: 40 + contentHeight});
            });
