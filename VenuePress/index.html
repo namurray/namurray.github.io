@@ -14,13 +14,27 @@
         <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
         <script>
-        $( "#test" ).one( "click", function() {
-          $( this ).height( 400 ).css({
-            cursor: "auto",
+       $(document).ready(function() {
 
-          });
-        });
-</script>
+          $("#test").hover(
+            //on mouseover
+            function() {
+              $(this).animate({
+                height: '+=140' //adds 140px
+                }, 'slow' //sets animation speed to slow
+              );
+            },
+            //on mouseout
+            function() {
+              $(this).animate({
+                height: '-=140px' //substracts 250px
+                }, 'slow'
+              );
+            }
+          );
+
+});
+        </script>
     </head>
     <body>
         <div class="wrap">
