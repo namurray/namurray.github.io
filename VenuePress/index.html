@@ -11,13 +11,12 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
         <script>
        $(document).ready(function () {
-        var height= $("#hgroup").height();
-        
-        $("#test").css({marginTop: 140 + height});
+        var hgroupheight= $("#hgroup").height();
+        $("#test").css({height: hgroupheight});
         });
 </script>
     </head>
