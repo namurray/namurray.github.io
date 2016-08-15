@@ -3,7 +3,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->hgr
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,27 +14,8 @@
         <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
         <script>
-       $(document).ready(function() {
-
-          $("#test").hover(
-            //on mouseover
-            function() {
-              $(this).animate({
-                height: '+=140' //adds 140px
-                }, 'slow' //sets animation speed to slow
-              );
-            },
-            //on mouseout
-            function() {
-              $(this).animate({
-                height: '-=140px' //substracts 250px
-                }, 'slow'
-              );
-            }
-          );
-
-});
-        </script>
+$('#test').css({"height":"140px"});
+</script>
     </head>
     <body>
         <div class="wrap">
@@ -81,7 +62,7 @@
                     
                 <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
                     <div id="test" class="eventsfeatured__event__hidden" style="height: auto;">
-                         <hgroup>
+                         <hgroup id="hgroup">
                             <h2 class="eventsfeatured__event-title">Zac Brown BandBand Band Band</h2>
                             <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
                         </hgroup>
