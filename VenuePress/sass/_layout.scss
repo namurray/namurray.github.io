@@ -175,51 +175,67 @@ footer {
 }
 
 //Section: Featured Events
-.eventsfeatured {
+.eventsfeatured,
+.eventsfeatured--small {
     @include flexdisplay;
     flex-wrap: wrap;
-    min-height: 100%
+    min-height: 100%;
+    li {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+         list-style-type: none;
+    }
 }
-.eventsfeatured__event {
+.eventsfeatured__event,
+.eventsfeatured__event--small{
     width: 100%;
     position: relative;
+}
+.eventsfeatured__event {
     height: 500px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
     @include breakpoint ($break-small) {
         width: 50%;
         height: 500px; 
         float: left
     }
-    &:hover .eventsfeatured__event__hidden {
+    &:hover .eventsfeatured__event-details--hidden {
         height: 500px !important;
         background-color: rgba($color-primary,.8);
     }
-    
+    &:hover .hgroup--eventsfeatured__event-title::after{
+        content: '-';
+    }
 }
-.eventsfeatured__event__hidden {
+.hgroup--eventsfeatured__event-title {
+    &::after{
+        content: '+';
+        font-size: 2em
+    }
+}
+.eventsfeatured__event--small {
+        height: 300px;
+        @include breakpoint ($break-small) {
+            width: 33.333%;
+            float: left
+        }
+}
+.eventsfeatured__event-details {
     overflow-y: hidden;
     position: absolute;
     bottom: 0;
     width: 100%;
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-    & > hgroup {
-        margin-bottom: 1rem;
-        margin-top: 2.618rem;
-    }
-}
-
-.eventsfeatured__event--small {
-    widows: 100%;
-    @include breakpoint ($break-small) {
-        width: 33.333%;
-        float: left
+    &--hidden {
+        -webkit-transition: .8s ease-in-out;
+        -moz-transition: .8s ease-in-out;
+        -o-transition: .8s ease-in-out;
+        transition: .8s ease-in-out;
+        & > hgroup {
+            margin-bottom: 1rem;
+            margin-top: 2.618rem;
+        }
     }
 }
 
@@ -227,11 +243,11 @@ footer {
 //Section: Event Search
 #section--eventsearch {
     width: 100%;
+    padding: 1em 0;
     @include flexdisplay;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1.5em 0;
     div {
         width: 95%;
         &:first-of-type {
@@ -256,6 +272,7 @@ footer {
     select {
         margin: .5em 0
     }
+    @include breakpoint ($break-small) {padding: 0}
 }
 .eventsearch__filter > form {
     clear: both;
@@ -276,25 +293,49 @@ footer {
 //Section: Event Listings
 #section--eventlist {
     @include clearfix;
+    li {
+        @include flexdisplay;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include breakpoint ($break-medium) {
+           flex-wrap: nowrap; 
+        }
+    }
     span {
         display: block;
         @include clearfix
     }
     div {
-        float: left
+        float: left;
+        flex-grow: 1;
+        align-self: center;
+         padding: 0 1rem;
+         @include breakpoint ($break-small){
+            padding: 0
+         }
     }
 }
 .eventlist__img {
-    @include breakpoint ($break-xsmall){
-        max-width: 40%
+    overflow: hidden;
+    @include breakpoint ($break-small){
+        max-height: 250px;
+        max-width: 250px;
+        margin-right: 5%;
       }
+    img {
+        vertical-align: bottom
+    }
 }
-.eventlist__details {
-    margin: .618em 0;
-     @include breakpoint ($break-small){
-         margin: 0
-     }
+.eventlist__title {
+    @include breakpoint ($break-small){
+        width: 30%;
+    }
 }
-.eventlist__details__date {
-    font-family: $font-primary
+.eventlist__button  {
+    width: 100%;
+    margin: 1.618rem 0;
+    @include breakpoint ($break-small){
+        width: auto;
+        margin: 0
+         }
 }

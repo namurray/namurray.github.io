@@ -66,27 +66,33 @@ a:hover {
     width: 30px;
     height: 30px;
 }
+
 //SECTIONS & PAGES
 #section--mailinglist {
     background-color: #aaa
 }
+
+
 #section--eventsearch {
     background-color: #eee;
 }
 
-.eventsfeatured__title {
-    color: #fff;
+
+.eventsfeatured__event-details {
+    color: white;
     text-align: center;
-    width: 100%
+    &--small {
+        font-size: .618em !important
+    }
 }
+.eventsfeatured__event-title--small {
+    font-family: $font-primary
+}
+
 .eventsfeatured__event-title--sub {
     font-size: 2em;
     font-family: $font-primary;
     text-transform: none;
-}
-.eventsfeatured__event__hidden {
-    text-align: center;
-    color: white
 }
 .eventsfeatured__event__date, 
 .eventsfeatured__event__venue, 
@@ -101,12 +107,9 @@ a:hover {
     margin-bottom: 1.618rem
 }
 
+
 #section--eventlist {
     color: lighten( $color-text, 40% );
-    li {
-        display: block;
-        clear: both
-    }
 }
 .eventlist__title__presents {
     font-family: $font-secondary;
@@ -120,6 +123,9 @@ a:hover {
     font-family: $font-primary--bold;
     text-transform: uppercase;
     color: lighten( $color-text, 60% )
+}
+.eventlist__details__date {
+    font-family: $font-primary--bold
 }
 .eventlist__details__venue, .eventlist__details__city {
     color: lighten($color-secondary, 10%);

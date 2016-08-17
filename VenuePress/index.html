@@ -16,9 +16,9 @@
         <script>
             //sets height for homepage featured events hidden details
          $(document).ready(function () {
-             $( ".eventsfeatured__event__hidden" ).each(function(){
+             $( ".eventsfeatured__event-details--hidden" ).each(function(){
                 var contentHeight = $(this).children('.hgroup--eventsfeatured__event-title').height();
-                 $(this).css({height: 40 + contentHeight});
+                 $(this).css({height: 30 + contentHeight});
            });
          })
         </script>
@@ -67,10 +67,11 @@
                 <ul class="eventsfeatured">
                     
                 <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                    <div class="eventsfeatured__event__hidden">
+                    <div class="eventsfeatured__event-details eventsfeatured__event-details--hidden">
                          <hgroup class="hgroup--eventsfeatured__event-title">
-                            <h2 class="eventsfeatured__event-title">Zac Brown BandBand Band Band</h2>
+                            <h2 class="eventsfeatured__event-title">Zac Brown BandBand Band BandBandd</h2>
                             <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
+                             
                         </hgroup>
                         <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
                         <span class="eventsfeatured__event__venue">American Airlines Center</span>
@@ -80,7 +81,7 @@
                    
                 </li>
                 <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                    <div class="eventsfeatured__event__hidden">
+                    <div class="eventsfeatured__event-details eventsfeatured__event-details--hidden">
                         <hgroup class="hgroup--eventsfeatured__event-title">
                             <h2 class="eventsfeatured__event-title">P!NK</h2>
                             <h2 class="eventsfeatured__event-title--sub">with Alabama Shakes</h2>
@@ -92,10 +93,27 @@
                     </div>
                 </li>
                 </ul>
-                
-                <div class="eventsfeatured__event--small"><img src="img/685x515.jpg" /></div>
-                <div class="eventsfeatured__event--small"><img src="img/685x515.jpg" /></div>  
-                <div class="eventsfeatured__event--small"><img src="img/685x515.jpg" /></div>  
+            
+                <ul class="eventsfeatured--small">
+                    <li class="eventsfeatured__event--small" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details eventsfeatured__event-details--small">
+                            <h2 class="eventsfeatured__event-title--small">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                        </hgroup>
+                    </li>
+                    <li class="eventsfeatured__event--small" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details eventsfeatured__event-details--small">
+                            <h2 class="eventsfeatured__event-title--small">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                        </hgroup>
+                    </li>
+                    <li class="eventsfeatured__event--small" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details eventsfeatured__event-details--small">
+                            <h2 class="eventsfeatured__event-title--small">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                        </hgroup>
+                    </li>
+                </ul>
             </section>
             
             <section id="section--eventsearch">
@@ -152,11 +170,11 @@
                         <div class="eventlist__img"><img src="img/685x515.jpg"></div>
                         <div class="eventlist__title">
                             <span class="eventlist__title__presents is-super">Rapgame Entertainment Presents:</span>
-                            <span class="eventlist__title__act">Curren$y</span>
-                            <span class="eventlist__title__subtitle is-sub">Cruis'n USA Tour 2016</span>
+                            <span class="eventlist__title__act">Badfish</span>
+                            <span class="eventlist__title__subtitle is-sub">A Tribute to Sublime</span>
                         </div>
                         <div class="eventlist__details">
-                            <span class="eventlist__details__date">Monday, June 6</span>
+                            <span class="eventlist__details__date">Tuesday, June 7</span>
                             <span class="eventlist__details__time">Doors: 7:00pm / Show: 8:00pm</span>
                             <span class="eventlist__details__venue">The Observatory at North Park</span>
                             <span class="eventlist__details__city">Santa Ana, CA</span>
@@ -171,11 +189,11 @@
                         <div class="eventlist__img"><img src="img/685x515.jpg"></div>
                         <div class="eventlist__title">
                             <span class="eventlist__title__presents is-super">Rapgame Entertainment Presents:</span>
-                            <span class="eventlist__title__act">Curren$y</span>
-                            <span class="eventlist__title__subtitle is-sub">Cruis'n USA Tour 2016</span>
+                            <span class="eventlist__title__act">Notorious B.I.G.</span>
+                            <span class="eventlist__title__subtitle is-sub">Featuring 2Pac &amp; Nas</span>
                         </div>
                         <div class="eventlist__details">
-                            <span class="eventlist__details__date">Monday, June 6</span>
+                            <span class="eventlist__details__date">Wednesday, June 8</span>
                             <span class="eventlist__details__time">Doors: 7:00pm / Show: 8:00pm</span>
                             <span class="eventlist__details__venue">The Observatory at North Park</span>
                             <span class="eventlist__details__city">Santa Ana, CA</span>
