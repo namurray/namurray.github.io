@@ -55,9 +55,6 @@ a:hover {
         a:hover {
             color: $menu-link-color--hover
         }
-        @include breakpoint ($break-small) {
-           display: inline-block; 
-        }
     }
 }
 
@@ -140,9 +137,10 @@ a:hover {
 //Slider
 
 .topslider {
-    widows: 100%;
+    width: 100%;
     background-image: url(../img/1210x530.jpg);
     background-size: cover;
+    background-position: center;
     height: 550px
 }
 

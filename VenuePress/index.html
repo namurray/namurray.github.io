@@ -29,15 +29,15 @@
             <img src="inc/twlogo_whiteonblack.gif" class="header__logo" />
             <nav role="navigation">
                <a class="mainmenu__icon" href="#">
-                  <svg><use xlink:href="inc/symbol-defs.svg#icon-plus"></use></svg>
                 </a>
                 <ul class="mainmenu" role="menubar">
-                    <li role="presentation"><a role="menuitem" href="http://home.com">Home</a></li>
-                    <li role="presentation"><a role="menuitem" href="http://featiures.com">Features</a></li>
-                    <li role="presentation"><a role="menuitem" href="http://pages.com">Pages</a></li>
-                    <li role="presentation"><a role="menuitem" href="http://events.com">Events</a></li>
-                    <li role="presentation"><a role="menuitem" href="http://shortcodes.com">Shortcodes</a></li>
-                    <li role="presentation"><a role="menuitem" href="http://demo.com">Demo</a></li>
+                    <li><a role="menuitem" href="http://home.com">Home</a></li>
+                    <li><a role="menuitem" href="http://featiures.com">Features</a></li>
+                    <li><a role="menuitem" href="http://pages.com">Pages</a></li>
+                    <li role="presentation" tabindex="0" class="mainmenu__icon">+</li>
+                    <li><a role="menuitem" href="http://events.com">Events</a></li>
+                    <li><a role="menuitem" href="http://shortcodes.com">Shortcodes</a></li>
+                    <li><a role="menuitem" href="http://demo.com">Demo</a></li>
                 </ul>
             </nav>
         </header>
@@ -140,7 +140,7 @@
                     </form>
                 </div>
                 <div class="eventsearch__search">
-                    <input type="search" />
+                    <input type="search" placeholder="Search events & arists"/>
                     <button type="submit" class="button button--light eventsearch__button">Search</button>
                 </div>
             </section>
@@ -206,7 +206,7 @@
                 </ul>
             </section>
             
-            <section id="section--customcontent">
+            <section id="section--customcontent" class="section--padded">
                 <span class="text-fancy is-super">Discover new music and food</span>
                 <h1>Live It Up</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat, dui vitae venenatis sodales, libero nisl mattis enim, non ultrices justo justo ac nibh. Morbi vel neque condimentum, mattis mauris nec, ultrices leo. Etiam vitae urna vel dolor tempor tincidunt. Vestibulum feugiat ex et ultricies efficitur. Nam mollis lectus eu tincidunt cursus.</p>
@@ -214,8 +214,8 @@
             
         </main>
         
-        <footer itemscope itemtype="http://schema.org/MusicVenue">
-            
+        <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded">
+        
             <div class="footerbox footerbox--1">
                 <h1 class="h3">Explore</h1>
                 <ul class="list-nostyle">

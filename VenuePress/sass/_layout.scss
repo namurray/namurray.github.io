@@ -41,6 +41,9 @@ $break-xlarge: 1200px;
 
 //Alignment
 .align-center {display: block; margin: 0 auto}
+.section--padded {
+    padding: 0 2em;
+}
 
 
 //SECTIONS
@@ -78,19 +81,44 @@ nav {
 .mainmenu {
     position: absolute;
     top: 40px;
-    
     @if $menu-position == 1 {
         left: 10px;
     } @else {
         right: 10px;
     }
-    
     @include breakpoint ($break-small){
-        position: inherit;
+        position: absolute;
+        top: 10px
+    }
+    li {
+        display:inline-block;
+        &:nth-child(4) {
+            cursor: pointer;
+            padding: 0;
+        @include breakpoint ($break-small){
+            display: none;
+        }
+            &:focus ~ li, &:hover ~ li {
+              opacity: 1;
+              height: 2.618rem;
+              }
+        }
+        &:nth-child(n+5) {
+          opacity:0;
+          overflow: hidden;
+          height: 0;
+          display: block;
+          transition: all 0.5s 1s;
+            @include breakpoint ($break-small){
+                opacity: initial;
+                height: initial;
+                display: initial;
+            }
+        }
     }
 }
 
-.mainmenu__icon {   
+/*.mainmenu__icon {   
     color: white;
     position: absolute;
     top: 5px;
@@ -101,7 +129,7 @@ nav {
     @include breakpoint ($break-small) {
         display: none
     }
-}
+}*/
 
 
 //Footer
