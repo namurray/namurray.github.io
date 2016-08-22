@@ -39,6 +39,10 @@
 
 
 //SECTIONS
+
+main + article {
+    padding-top: 65px
+}
 .wrap {
     max-width: 1800px;
     margin: 0 auto;
@@ -156,7 +160,7 @@ footer {
 
 //Sections
 
-#section--topslider, .section--top {
+#section--topslider {
     position: relative;
     top: -65px;
     z-index: -1;
