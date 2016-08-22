@@ -40,13 +40,16 @@
 
 //SECTIONS
 
-main + article {
-    padding-top: 65px
-}
 .wrap {
     max-width: 1800px;
     margin: 0 auto;
     display: block
+}
+.section--top {
+    position: relative;
+    top: -65px;
+    z-index: -1;
+    margin-bottom: -65px;
 }
 
 //Header
