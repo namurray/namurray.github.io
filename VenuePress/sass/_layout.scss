@@ -275,56 +275,6 @@ footer {
 }
 
 
-//Section: Event Search
-#section--eventsearch {
-    width: 100%;
-    padding: 1em 0;
-    @include flexdisplay;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    div {
-        width: 95%;
-        &:first-of-type {
-            @include breakpoint ($break-large) {
-                width: 60%;
-                text-align: center;
-            }
-        }
-        &:last-of-type {
-            @include breakpoint ($break-large) {
-                width: 40%
-            }
-        }
-    }
-    input {
-        width: 100%;
-        margin: 1em 0;
-        @include breakpoint ($break-medium) {
-            width: 80%
-        }
-    }
-    select {
-        margin: .5em 0
-    }
-    @include breakpoint ($break-small) {padding: 0}
-}
-.eventsearch__filter > form {
-    clear: both;
-    width: 100%;
-    display: block;
-    @include breakpoint ($break-small) {
-        display: inline;
-    }
-}
-.eventsearch__button {
-   width: 100%;
-    @include breakpoint ($break-medium) {
-        width: auto
-    }
-   
-}
-
 //Section: Event Listings
 #section--eventlist {
     @include clearfix;

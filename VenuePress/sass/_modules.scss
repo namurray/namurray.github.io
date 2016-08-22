@@ -1,0 +1,96 @@
+//Reusable modules like search forms and buttons
+
+input {
+    background-color: $input-color;
+    padding: .5em 10px;
+    font-style: italic
+}
+
+select {
+    background: $input-color;
+    padding: .7em;
+    font-size: .9em;
+    font-family: $font-primary--bold
+}
+label {
+    font-family: $font-primary--bold
+}
+
+.button {
+    padding: .5em 1em;
+    display: inline-block;
+    background-color: $button-color--standard;
+    color: $button-text-color;
+    text-transform: uppercase;
+    font-family: $font-primary--bold;
+    min-width: 115px;
+    &--higlight {
+        background-color: lighten($button-color--standard, 50%);
+    }
+    &--emphasis {
+        background-color: $color-tertiary;
+        padding: 1rem 2.1618rem;
+    }
+    &--light {
+        font-family: $font-primary;
+        text-transform: none
+    }
+    &--fancy--light {
+            font-size: 1.6em;
+             background-color: rgba(0, 0, 0, .4);
+            color: #000
+        }
+    &--fancy--dark {
+        font-size: 1.6em;
+        background-color: rgba(255, 255, 255, .8);
+        color: #fff
+    }
+}
+
+//Event Search & Filter
+.m--eventsearchwrap {
+    @include flexdisplay;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint ($break-xlarge){
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    form {
+        display: inline-block
+    }
+}
+.m--eventsearch__filter {
+    width: 100%;
+     @include breakpoint ($break-medium){
+        width: auto;
+         margin-right: 2.618rem;
+     }
+    form {
+        margin: 0.618rem; 
+         @include breakpoint ($break-xlarge){
+            margin: 0
+        }
+        select {
+            width: 250px
+        }
+    }
+    button {
+        width: 100%;
+        @include breakpoint ($break-xsmall){
+            width: auto
+        }
+   }
+}
+.m--eventsearch__search {
+    margin: 0 0.618rem 1.618rem;
+    @include breakpoint ($break-xlarge){
+        margin: 0
+    }
+    input[type='search'] {
+        width: calc(100% - 120px);
+        @include breakpoint ($break-xlarge){
+            width: 250px
+        }
+    }
+}

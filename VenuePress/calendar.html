@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>ticketweb venue and club</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+        <script>
+            //sets height for homepage featured events hidden details
+         $(document).ready(function () {
+             $( ".eventsfeatured__event-details--hidden" ).each(function(){
+                var contentHeight = $(this).children('.hgroup--eventsfeatured__event-title').height();
+                 $(this).css({height: 30 + contentHeight});
+           });
+         })
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+        <header>
+            <img src="inc/twlogo_whiteonblack.gif" class="header__logo" />
+            <nav role="navigation">
+                <ul class="mainmenu" role="menubar">
+                    <li><a role="menuitem" href="http://home.com">Home</a></li>
+                    <li><a role="menuitem" href="http://featiures.com">Features</a></li>
+                    <li><a role="menuitem" href="http://pages.com">Pages</a></li>
+                    <li role="presentation" tabindex="0" class="mainmenu__icon">+</li>
+                    <li><a role="menuitem" href="http://events.com">Events</a></li>
+                    <li><a role="menuitem" href="http://shortcodes.com">Shortcodes</a></li>
+                    <li><a role="menuitem" href="http://demo.com">Demo</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main role="main">
+        <section id="section--calendartop">
+            <div>
+                <span class="text-fancy is-super">Save the dates, check out our</span>
+                <h1>Event Calendar</h1>
+            </div>
+        </section>
+            
+            <section id="section--calendarsearch">
+                <h1 class="text-reader-only">search and filter events</h1>
+                <div class="m--eventsearchwrap">
+                    <div class="m--eventsearch__filter">
+                        <form>
+                            <label for="genre">Genre:</label> 
+                            <select name="genre" id="genre">
+                              <option value="volvo">Pop</option>
+                              <option value="saab">Rock</option>
+                              <option value="mercedes">Rap</option>
+                              <option value="audi">Country</option>
+                            </select>
+                        </form>
+                        <form>
+                            <label for="subgenre">Subgenre:</label> 
+                            <select name="subgenre" id="subgenre">
+                              <option value="volvo">Pop</option>
+                              <option value="saab">Rock</option>
+                              <option value="mercedes">Rap</option>
+                              <option value="audi">Country</option>
+                            </select>
+                            <button type="submit" class="button button--light eventsearch__button">Find Events</button>
+                        </form>
+                    </div>
+                    <div class="m--eventsearch__search">
+                        <input type="search" placeholder="Search events & arists"/>
+                        <button type="submit" class="button button--light eventsearch__button">Search</button>
+                    </div>
+                </div>
+            </section>
+        
+        </main>
+        
+        <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded">
+        
+            <div class="footerbox footerbox--1">
+                <h1 class="h3">Explore</h1>
+                <ul class="list-nostyle">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Shortcodes</a></li>
+                    <li><a href="#">Demo</a></li>
+                </ul>
+            </div>
+            
+            <div class="footerbox footerbox--2">
+                <h1 class="h3">Hours</h1>
+                 <span itemprop="openingHours" content="Mo,Tu,We,Th 11:00-23:00">
+                     <dl>
+                     <dt>Monday &ndash; Thursday</dt>
+                     <dd>11am to 11pm</dd>
+                         </dl>
+                </span>
+                <span itemprop="openingHours" content="Fr,Sa,Sa 11:00-00:00">
+                    <dl> 
+                    <dt>Friday &ndash; Sunday</dt>
+                     <dd>11am to 2am</dd>
+                        </dl>
+                </span>
+            </div>
+            
+            <div class="footerbox footerbox--3">
+                <img src="inc/twlogo_whiteonblack.gif" width="50%" /> <br />
+                <span itemprop="name">TicketWeb Venue Club and Bar</span><br />
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">11232 Promiseland St.</span><br />
+                    <span itemprop="addressLocality">New York</span>, <span itemprop="addressRegion">NY</span> <span itemprop="postalCode">40403</span><br />
+                </span>
+                <span itemprop="telephone">832.122.3215</span><br />
+                <a href="mailto:jane-doe@xyz.edu" itemprop="email">info@ticketwebvenue.com</a>
+            </div>
+        
+        </footer>
+        </div>
+    </body>
+</html>

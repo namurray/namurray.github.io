@@ -65,13 +65,14 @@ a:hover {
 }
 
 //SECTIONS & PAGES
+
+//HOMEPAGE
 #section--mailinglist {
     background-color: #aaa
 }
-
-
 #section--eventsearch {
     background-color: #eee;
+    padding: 1.618rem 0;
 }
 
 
@@ -103,8 +104,6 @@ a:hover {
 .eventsfeatured__event__city {
     margin-bottom: 1.618rem
 }
-
-
 #section--eventlist {
     color: lighten( $color-text, 40% );
 }
@@ -132,6 +131,9 @@ a:hover {
     font-style: italic;
     font-size: .8em
 }
+
+@import 'calendar';
+
 //COMPONENTS
 
 //Slider
@@ -142,53 +144,4 @@ a:hover {
     background-size: cover;
     background-position: center;
     height: 550px
-}
-
-//Forms & Buttons
-
-input {
-    background-color: $input-color;
-    padding: .5em 10px;
-    font-style: italic
-}
-
-select {
-    background: $input-color;
-    width: 200px;
-    padding: .7em;
-    font-size: .9em;
-    font-family: $font-primary--bold
-}
-label {
-    font-family: $font-primary--bold
-}
-
-.button {
-    padding: .5em 1em;
-    display: inline-block;
-    background-color: $button-color--standard;
-    color: $button-text-color;
-    text-transform: uppercase;
-    font-family: $font-primary--bold;
-    &--higlight {
-        background-color: lighten($button-color--standard, 50%);
-    }
-    &--emphasis {
-        background-color: $color-tertiary;
-        padding: 1rem 2.1618rem;
-    }
-    &--light {
-        font-family: $font-primary;
-        text-transform: none
-    }
-    &--fancy--light {
-            font-size: 1.6em;
-             background-color: rgba(0, 0, 0, .4);
-            color: #000
-        }
-    &--fancy--dark {
-        font-size: 1.6em;
-        background-color: rgba(255, 255, 255, .8);
-        color: #fff
-    }
 }

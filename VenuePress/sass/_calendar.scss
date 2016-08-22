@@ -1,0 +1,15 @@
+//Calendar/Event list page
+
+#section--calendartop {
+    text-align: center;
+    height: 40vh;
+    @include flexdisplay;
+    flex-direction: column;
+    * {
+        margin: auto
+    }
+}
+
+#section--calendarsearch {
+    padding: 1.618rem 0
+}
