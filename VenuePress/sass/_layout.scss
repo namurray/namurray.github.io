@@ -47,7 +47,6 @@ $break-xlarge: 1200px;
 
 
 //SECTIONS
-
 .wrap {
     max-width: 1800px;
     margin: 0 auto;
@@ -63,7 +62,8 @@ header {
     @include flexdisplay;
     flex-direction: $header-direction;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    z-index: 1
 }
 .header__logo {
     max-width: 150px;
