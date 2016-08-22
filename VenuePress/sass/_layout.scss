@@ -1,13 +1,5 @@
 //SECTIONS, GRID, FLOATS ETC
 
-//Breakpoints
-$break-xsmall: 500px;
-$break-small: 600px;
-$break-medium: 768px;
-$break-large: 1024px;
-$break-xlarge: 1200px;
-
-
 //LAYOUT HELPERS
 
 //Display
@@ -67,6 +59,7 @@ header {
 }
 .header__logo {
     max-width: 150px;
+    margin: 1rem 0 0 1rem;
     @if $menu-position == 1 {
         order: 2
     } @else {
@@ -216,11 +209,7 @@ footer {
     flex-wrap: wrap;
     min-height: 100%;
     li {
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-position: center;
+        @include bg-cover;
          list-style-type: none;
     }
 }

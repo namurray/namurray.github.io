@@ -3,6 +3,8 @@
 #section--calendartop {
     text-align: center;
     height: 40vh;
+    background-image: url(../img/bg-color.jpg);
+    @include bg-cover;
     @include flexdisplay;
     flex-direction: column;
     * {

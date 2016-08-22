@@ -79,7 +79,8 @@ label {
         width: 100%;
         margin-top: 0.618rem;
         @include breakpoint ($break-xsmall){
-            width: auto
+            width: auto;
+            margin: 0
         }
    }
 }

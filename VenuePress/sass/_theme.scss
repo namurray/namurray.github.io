@@ -3,6 +3,13 @@
 //Declare your base styles to be reused through out components (buttons, links etc)
 //
 
+//Breakpoints
+$break-xsmall: 500px;
+$break-small: 600px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-xlarge: 1200px;
+
 //COLORS
 
 $color-text: rgba(0 , 0 ,0 , 1); //black

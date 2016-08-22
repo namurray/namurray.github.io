@@ -141,7 +141,6 @@ a:hover {
 .topslider {
     width: 100%;
     background-image: url(../img/1210x530.jpg);
-    background-size: cover;
-    background-position: center;
+    @include bg-cover;
     height: 550px
 }
