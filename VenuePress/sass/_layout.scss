@@ -59,6 +59,7 @@ $break-xlarge: 1200px;
 header {
     position: $header-position;
     width: 100%;
+    max-width: 1800px;
     @include flexdisplay;
     flex-direction: $header-direction;
     justify-content: space-between;
@@ -79,17 +80,17 @@ nav {
     order: $menu-position;
 }
 .mainmenu {
-    position: absolute;
-    top: 40px;
-    @if $menu-position == 1 {
-        left: 10px;
-    } @else {
-        right: 10px;
-    }
-    @include breakpoint ($break-small){
+    @if $header-direction == 'row' {
         position: absolute;
-        top: 10px
+        top: 10px;
+        @if $menu-position == 2 {
+            right: 10px;
+        } @else {
+            left: 10px
+        }   
     }
+
+    
     li {
         display:inline-block;
         &:nth-child(4) {
@@ -108,7 +109,7 @@ nav {
           overflow: hidden;
           height: 0;
           display: block;
-          transition: all 0.5s 1s;
+          transition: all 0.5s 0.3s;
             @include breakpoint ($break-small){
                 opacity: initial;
                 height: initial;
