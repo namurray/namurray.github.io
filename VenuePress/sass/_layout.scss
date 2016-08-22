@@ -47,6 +47,11 @@
 }
 .section--top {
     @if $header-position == 'fixed' {
+        position: relative;
+        top: -65px;
+        z-index: -1;
+        margin-bottom: -65px;
+        height: 60vh
     }
 }
 
