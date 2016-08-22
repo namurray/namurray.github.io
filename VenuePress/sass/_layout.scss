@@ -80,7 +80,7 @@ nav {
         position: absolute;
         top: 10px;
         @if $menu-position == 2 {
-            right: 10px;
+            right: 15px;
         } @else {
             left: 10px
         }   
@@ -156,7 +156,7 @@ footer {
 
 //Sections
 
-#section--topslider {
+#section--topslider, .section--top {
     position: relative;
     top: -65px;
     z-index: -1;
