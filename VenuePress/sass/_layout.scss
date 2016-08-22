@@ -96,20 +96,26 @@ nav {
         &:nth-child(4) {
             cursor: pointer;
             padding: 0;
-        @include breakpoint ($break-small){
-            display: none;
-        }
+            &:hover {
+                padding: 150px;
+                margin: -150px;
+                position: relative;
+                z-index: 1;
+            }
             &:focus ~ li, &:hover ~ li {
               opacity: 1;
               height: 2.618rem;
-              }
+            }
+            @include breakpoint ($break-small){
+                display: none;
+            }
         }
         &:nth-child(n+5) {
           opacity:0;
           overflow: hidden;
           height: 0;
           display: block;
-          transition: all 0.5s 0.3s;
+          transition: all 0.5s;
             @include breakpoint ($break-small){
                 opacity: initial;
                 height: initial;
