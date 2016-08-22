@@ -46,10 +46,8 @@
     display: block
 }
 .section--top {
-    position: relative;
-    top: -65px;
-    z-index: -1;
-    margin-bottom: -65px;
+    @if $header-position == 'fixed' {
+    }
 }
 
 //Header
