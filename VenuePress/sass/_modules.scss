@@ -96,3 +96,104 @@ label {
         }
     }
 }
+
+//Calendar (list)
+$block-size: 110px;
+
+#m--calendar--list {
+    width: 95%;
+    margin: 1rem auto;
+    @include breakpoint ($break-small) {
+        margin: 4.236rem auto;
+        width: 85%
+    }
+    hr {
+        margin: 2.618rem 0 4.236rem
+    }
+}
+.m--calendarnav {
+    @include flexdisplay;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    li a {
+        color: inherit;
+        text-transform: uppercase;
+        font-family: $font-primary--bold
+    }
+}
+.m--calendarnav__month--current {
+    text-align: center
+}
+.m--calendarnav__month--prev:before {
+    content:'<< '
+}
+.m--calendarnav__month--next:after {
+    content: ' >>'
+}
+
+.m--calendarview {
+    max-width: 575px;
+    margin: 0 auto
+}
+.m--calendarevent {
+    @include flexdisplay;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: .618rem;
+}
+.m--calendarevent__date {
+    text-align: center;
+    width: $block-size;
+    height: $block-size;
+    background: $color-secondary;
+    color: #fff;
+    margin-right: 0.382rem;
+    &__container {
+        border: 1px solid white;
+        width: 80%;
+        margin: .9em auto;
+        > span {
+            display: block
+        }
+    }
+    &__month {
+        margin-bottom: -1em
+    }
+    &__dayno {
+        font-size: 4.236rem;
+        font-family: $font-primary--xbold
+    }
+    &__day {
+        margin-top: -.8em;
+    }
+}
+.m--calendarevent__img {
+    display: none;
+    @include breakpoint ($break-small) {
+        display: inherit
+    }
+    img {
+        height: $block-size;
+    }
+}
+.m--calendarevent__details {
+    width: 40%;
+    padding: 0 .618rem;
+    > span {
+        display: block
+    }
+    &__time, &__venue {
+        font-family: $font-secondary;
+        font-style: italic
+    }
+    &__venue {
+        color: $color-secondary
+    }
+    &__artist {
+        text-transform: uppercase;
+        font-size: 1.618rem;
+    }
+}
