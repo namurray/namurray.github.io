@@ -17,6 +17,16 @@
     height:1px;
     overflow:hidden;
 } 
+.text-fancy {
+    font-family: $font-secondary;
+    font-size: 1.5em;
+    font-style: italic
+}
+.text-emph {
+    font-family: $font-primary--xbold; 
+    font-size: 4.236rem; 
+    text-transform: uppercase
+}
 .is-super{margin-bottom: -.5em}
 .is-sub {margin-top: -.2em}
 

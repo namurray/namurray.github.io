@@ -36,12 +36,12 @@ label {
         text-transform: none
     }
     &--fancy--light {
-            font-size: 1.6em;
+            font-size: 2.618rem;
              background-color: rgba(0, 0, 0, .4);
             color: #000
         }
     &--fancy--dark {
-        font-size: 1.6em;
+        font-size: 2.618rem;
         background-color: rgba(255, 255, 255, .8);
         color: #fff
     }
@@ -140,48 +140,68 @@ $block-size: 110px;
 .m--calendarevent {
     @include flexdisplay;
     flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: .618rem;
+    @include breakpoint ($break-small) {
+        flex-wrap: nowrap
+    }
 }
 .m--calendarevent__date {
     text-align: center;
-    width: $block-size;
-    height: $block-size;
+    width: 100%;
     background: $color-secondary;
     color: #fff;
-    margin-right: 0.382rem;
+    margin-bottom: 0.382rem;
+    flex: auto;
     &__container {
         border: 1px solid white;
-        width: 80%;
-        margin: .9em auto;
+        width: 95%;
+        margin: .5em auto;
         > span {
-            display: block
+                @include breakpoint($break-small) {
+                    display: block
+                }
+        }
+        @include breakpoint($break-small) {
+            width: 80%;
+            margin: .9em auto;
         }
     }
     &__month {
         margin-bottom: -1em
     }
     &__dayno {
-        font-size: 4.236rem;
-        font-family: $font-primary--xbold
+        @include breakpoint ($break-small){
+            font-size: 4.236rem;
+            font-family: $font-primary--xbold
+        }
     }
     &__day {
         margin-top: -.8em;
     }
+    @include breakpoint ($break-small) {
+         width: $block-size;
+        height: $block-size;
+        flex: initial;
+        margin-right: 0.382rem;
+        margin-bottom: 0;
+    }
 }
 .m--calendarevent__img {
-    display: none;
-    @include breakpoint ($break-small) {
-        display: inherit
-    }
+    display: inline-block;
+    width: 30%;
     img {
-        height: $block-size;
+        @include breakpoint ($break-small) {
+            height: $block-size;
+            width: auto;
+        }
     }
 }
 .m--calendarevent__details {
-    width: 40%;
+    width: 70%;
     padding: 0 .618rem;
+    display: inline-block;
     > span {
         display: block
     }
@@ -195,5 +215,17 @@ $block-size: 110px;
     &__artist {
         text-transform: uppercase;
         font-size: 1.618rem;
+    }
+    @include breakpoint ($break-small) {
+        width: 40%;
+    }
+}
+.m--calendarevent__button {
+    width: 100%;
+    flex: auto;
+    margin-top: 0.382rem;
+    @include breakpoint ($break-small) {
+        width: auto;
+        margin: 0;
     }
 }

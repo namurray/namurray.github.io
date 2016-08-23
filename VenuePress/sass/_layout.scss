@@ -7,8 +7,6 @@
 @mixin flexdisplay {
     display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
 }
 
 //Floats & clears
@@ -181,11 +179,12 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding: 19px 0;
     padding-bottom: 30px;
     div {
         width: 100%;
         padding: 0 1em;
+        line-height: 1.1;
         @include breakpoint ($break-medium){
             width: 45%;
             padding: 0
@@ -205,14 +204,16 @@ footer {
     button {
         width: 100%;
         @include breakpoint ($break-medium){
-                width: auto
+            width: auto;
+            vertical-align: middle
         }
     }
     input {
         padding: 20px 10px;
         width: 100%;
         @include breakpoint ($break-medium){
-                width: 400px
+            width: 400px;
+            vertical-align: middle
         }
     }
 }
@@ -266,6 +267,9 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    &--small {
+        bottom: 10px
+    }
     &--hidden {
         -webkit-transition: .8s ease-in-out;
         -moz-transition: .8s ease-in-out;
