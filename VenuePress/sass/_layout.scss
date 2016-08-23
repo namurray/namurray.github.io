@@ -46,11 +46,13 @@
     display: block
 }
 .section--top {
-    @if $header-position == 'fixed' {
+    @if $header-position == 'static' {
         position: relative;
         top: -65px;
         z-index: -1;
         margin-bottom: -65px;
+        height: 60vh
+    } @else {
         height: 60vh
     }
 }
