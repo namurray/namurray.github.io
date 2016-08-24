@@ -35,6 +35,43 @@
     padding: 0 2em;
 }
 
+//GRID (reusable flex boxes)
+
+$breakpoints: (
+    sm: $break-small,
+    md: $break-medium,
+    lg: $break-large
+);
+
+$grid-columns: 12;
+
+.l-col {
+    flex-basis: 100%;
+    flex-grow: 0;
+}
+
+@each $label, $breakpoint in $breakpoints {
+    @media (min-width: $breakpoint) {
+        @for $i from 1 to $grid-columns + 1 {
+            .l-col.col--#{$label}-#{$i} {
+                flex-basis: ($i / $grid-columns) * 100%;
+            }
+        }
+    }
+}
+
+.l-container {
+    &--rowwrap {
+        @include flexdisplay;
+        flex-flow: row wrap;
+        clear: both
+    }
+    &--rownowrap {
+        @include flexdisplay;
+        flex-flow: row nowrap;
+        clear: both
+    }
+}
 
 //SECTIONS
 
@@ -107,6 +144,7 @@ nav {
                 margin: -150px;
                 position: relative;
                 z-index: 1;
+                outline: none;
             }
             &:focus ~ li, &:hover ~ li {
               opacity: 1;
@@ -131,26 +169,8 @@ nav {
     }
 }
 
-/*.mainmenu__icon {   
-    color: white;
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    width: 200px;
-    text-align: right;
-    cursor: pointer;
-    @include breakpoint ($break-small) {
-        display: none
-    }
-}*/
-
-
 //Footer
 
-footer {
-    @include flexdisplay;
-    flex-wrap: wrap;
-}
 .footerbox {
     width: 100%;
     &--1 {order: 1}
@@ -214,70 +234,6 @@ footer {
         @include breakpoint ($break-medium){
             width: 400px;
             vertical-align: middle
-        }
-    }
-}
-
-//Section: Featured Events
-.eventsfeatured,
-.eventsfeatured--small {
-    @include flexdisplay;
-    flex-wrap: wrap;
-    min-height: 100%;
-    li {
-        @include bg-cover;
-         list-style-type: none;
-    }
-}
-.eventsfeatured__event,
-.eventsfeatured__event--small{
-    width: 100%;
-    position: relative;
-}
-.eventsfeatured__event {
-    height: 500px;
-    @include breakpoint ($break-small) {
-        width: 50%;
-        height: 500px; 
-        float: left
-    }
-    &:hover .eventsfeatured__event-details--hidden {
-        height: 500px !important;
-        background-color: rgba($color-primary,.8);
-    }
-    &:hover .hgroup--eventsfeatured__event-title::after{
-        content: '-';
-    }
-}
-.hgroup--eventsfeatured__event-title {
-    &::after{
-        content: '+';
-        font-size: 2em
-    }
-}
-.eventsfeatured__event--small {
-        height: 300px;
-        @include breakpoint ($break-small) {
-            width: 33.333%;
-            float: left
-        }
-}
-.eventsfeatured__event-details {
-    overflow-y: hidden;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    &--small {
-        bottom: 10px
-    }
-    &--hidden {
-        -webkit-transition: .8s ease-in-out;
-        -moz-transition: .8s ease-in-out;
-        -o-transition: .8s ease-in-out;
-        transition: .8s ease-in-out;
-        & > hgroup {
-            margin-bottom: 1rem;
-            margin-top: 2.618rem;
         }
     }
 }

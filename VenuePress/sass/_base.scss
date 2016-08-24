@@ -9,7 +9,7 @@ html {
 
 //HEADERS, TEXT, LINKS
 h1, .h1 {
-    font-size: 4.236rem;
+    font-size: 5rem;
     text-transform: uppercase;
     font-family: $header-font;
     @include breakpoint ($break-small){
@@ -58,7 +58,7 @@ a:hover {
     height: 30px;
 }
 
-//SECTIONS & PAGES
+//CUSTOMIZE SECTIONS & PAGES
 
 //HOMEPAGE
 #section--mailinglist {
@@ -67,37 +67,10 @@ a:hover {
 #section--eventsearch {
     background-color: #eee;
     padding: 1.618rem 0;
+    clear: both
 }
 
-
-.eventsfeatured__event-details {
-    color: white;
-    text-align: center;
-    &--small {
-        font-size: .618em !important
-    }
-}
-.eventsfeatured__event-title--small {
-    font-family: $font-primary
-}
-
-.eventsfeatured__event-title--sub {
-    font-size: 2em;
-    font-family: $font-primary;
-    text-transform: none;
-}
-.eventsfeatured__event__date, 
-.eventsfeatured__event__venue, 
-.eventsfeatured__event__city {
-    display: block;
-    font-size: 2rem
-}
-.eventsfeatured__event__date {
-    font-size: 2.618rem
-}
-.eventsfeatured__event__city {
-    margin-bottom: 1.618rem
-}
+//Event list
 #section--eventlist {
     color: lighten( $color-text, 40% );
 }

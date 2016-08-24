@@ -47,6 +47,88 @@ label {
     }
 }
 
+//Featured Events
+.m-eventsfeatured {
+    color: $color-contrast;
+    text-align: center;
+    li {
+        height: 500px;
+        @include bg-cover;
+        position: relative;
+    }
+}
+.m-eventsfeatured__details {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -o-transition: .8s ease-in-out;
+    transition: .8s ease-in-out;
+    &:hover {
+        height: 500px !important;
+        background-color: rgba($color-primary,.8);
+        .hgroup--eventsfeatured__event-title::after{
+          content: '-';
+        }
+   }
+    & > hgroup {
+        margin-bottom: 1rem;
+        margin-top: 2.618rem;
+        }
+    &--small {
+        bottom: 10px
+    }
+}
+.hgroup--eventsfeatured__event-title {
+    &::after{
+        content: '+';
+        font-size: 2em
+    }
+}
+
+.m-eventsfeatured__event-title {
+    @extend h1; 
+    &--sub {
+        font-family: $font-primary;
+        text-transform: none;
+    }
+}
+.m-eventsfeatured__event{
+    &__date, &__venue, &__city{
+        display: block;
+        font-size: 2rem
+    }
+    &__date {
+        font-size: 2.618rem
+    }
+    &__city {
+        margin-bottom: 1.618rem
+    }
+}
+
+
+.m-eventsfeatured--small {
+    li {
+        height: 300px;
+    }
+    hgroup {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .m-eventsfeatured__event-title {
+        font-size: 2.618rem;
+        font-family: $font-primary--bold;
+        &--sub {
+            font-size: 1.618rem;
+            font-family: $font-primary
+        }
+    }
+}
+
 //Event Search & Filter
 .m--eventsearchwrap {
     @include flexdisplay;

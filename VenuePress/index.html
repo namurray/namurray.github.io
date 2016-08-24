@@ -16,7 +16,7 @@
         <script>
             //sets height for homepage featured events hidden details
          $(document).ready(function () {
-             $( ".eventsfeatured__event-details--hidden" ).each(function(){
+             $( ".m-eventsfeatured__details" ).each(function(){
                 var contentHeight = $(this).children('.hgroup--eventsfeatured__event-title').height();
                  $(this).css({height: 30 + contentHeight});
            });
@@ -62,53 +62,53 @@
             
             <section id="section--eventsfeatured">
                 <h1 class="text-reader-only">featured events</h1>
-                <ul class="eventsfeatured">
-                    
-                <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                    <div class="eventsfeatured__event-details eventsfeatured__event-details--hidden">
-                         <hgroup class="hgroup--eventsfeatured__event-title">
-                            <h2 class="eventsfeatured__event-title h1">Zac Brown BandBand Band BandBandd</h2>
-                            <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
-                             
-                        </hgroup>
-                        <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
-                        <span class="eventsfeatured__event__venue">American Airlines Center</span>
-                        <span class="eventsfeatured__event__city">Dallas, TX</span>
-                        <button class="button button--emphasis">Details</button>
-                    </div>
-                   
-                </li>
-                <li class="eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                    <div class="eventsfeatured__event-details eventsfeatured__event-details--hidden">
-                        <hgroup class="hgroup--eventsfeatured__event-title">
-                            <h2 class="eventsfeatured__event-title h1">P!NK</h2>
-                            <h2 class="eventsfeatured__event-title--sub">with Alabama Shakes</h2>
-                        </hgroup>
-                        <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
-                        <span class="eventsfeatured__event__venue">American Airlines Center</span>
-                        <span class="eventsfeatured__event__city">Dallas, TX</span>
-                        <button class="button button--emphasis">Details</button>
-                    </div>
-                </li>
+                
+                <ul class="l-container--rowwrap m-eventsfeatured">    
+                    <li class="l-col col--sm-6" style="background-image: url('img/685x515.jpg');">
+                        <div class="m-eventsfeatured__details">
+                             <hgroup class="hgroup--eventsfeatured__event-title">
+                                <h2 class="m-eventsfeatured__event-title">Zac Brown BandBand Band BandBandd</h2>
+                                <h2 class="m-eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
+
+                            </hgroup>
+                            <span class="m-eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
+                            <span class="m-eventsfeatured__event__venue">American Airlines Center</span>
+                            <span class="m-eventsfeatured__event__city">Dallas, TX</span>
+                            <button class="button button--emphasis">Details</button>
+                        </div>
+
+                    </li>
+                    <li class="l-col col--sm-6" style="background-image: url('img/685x515.jpg');">
+                        <div class="m-eventsfeatured__details">
+                            <hgroup class="hgroup--eventsfeatured__event-title">
+                                <h2 class="m-eventsfeatured__event-title">P!NK</h2>
+                                <h2 class="m-eventsfeatured__event-title--sub">with Alabama Shakes</h2>
+                            </hgroup>
+                            <span class="m-eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
+                            <span class="m-eventsfeatured__event__venue">American Airlines Center</span>
+                            <span class="m-eventsfeatured__event__city">Dallas, TX</span>
+                            <button class="button button--emphasis">Details</button>
+                        </div>
+                    </li>
                 </ul>
             
-                <ul class="eventsfeatured--small">
-                    <li class="eventsfeatured__event--small" style="background-image: url('img/685x515.jpg');">
-                        <hgroup class="eventsfeatured__event-details eventsfeatured__event-details--small">
-                            <h2 class="eventsfeatured__event-title--small">Event Title</h2>
-                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                <ul class="l-container--rowwrap m-eventsfeatured m-eventsfeatured--small">
+                    <li class="l-col col--sm-4 m-eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="m-eventsfeatured__event-details">
+                            <h2 class="m-eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="m-eventsfeatured__event-title--sub">Event Subtitle</h2>
                         </hgroup>
                     </li>
-                    <li class="eventsfeatured__event--small" style="background-image: url('img/685x515.jpg');">
-                        <hgroup class="eventsfeatured__event-details eventsfeatured__event-details--small">
-                            <h2 class="eventsfeatured__event-title--small">Event Title</h2>
-                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                    <li class="l-col col--sm-4 m-eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="m-eventsfeatured__event-details">
+                            <h2 class="m-eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="m-eventsfeatured__event-title--sub">Event Subtitle</h2>
                         </hgroup>
                     </li>
-                    <li class="eventsfeatured__event--small" style="background-image: url('img/685x515.jpg');">
-                        <hgroup class="eventsfeatured__event-details eventsfeatured__event-details--small">
-                            <h2 class="eventsfeatured__event-title--small">Event Title</h2>
-                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                    <li class="l-col col--sm-4 m-eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="m-eventsfeatured__event-details">
+                            <h2 class="m-eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="m-eventsfeatured__event-title--sub">Event Subtitle</h2>
                         </hgroup>
                     </li>
                 </ul>
@@ -214,7 +214,7 @@
             
         </main>
         
-        <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded">
+        <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded l-container--rowwrap">
         
             <div class="footerbox footerbox--1">
                 <h1 class="h3">Explore</h1>
