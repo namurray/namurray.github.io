@@ -16,7 +16,7 @@
         <script>
             //sets height for homepage featured events hidden details
          $(document).ready(function () {
-             $( ".m-eventsfeatured__details" ).each(function(){
+             $( ".eventsfeatured__details" ).each(function(){
                 var contentHeight = $(this).children('.hgroup--eventsfeatured__event-title').height();
                  $(this).css({height: 30 + contentHeight});
            });
@@ -48,7 +48,7 @@
                 </div>
             </section>
         
-            <section id="section--mailinglist">
+            <section id="section--mailinglist" class="section--custom">
                 <h1 class="text-reader-only">join the mailing list</h1>
                 <div class="mailinglist__text">
                     <span class="text-fancy">Be on the inside</span> <br />
@@ -63,52 +63,52 @@
             <section id="section--eventsfeatured">
                 <h1 class="text-reader-only">featured events</h1>
                 
-                <ul class="l-container--rowwrap m-eventsfeatured">    
+                <ul class="l-container--rowwrap eventsfeatured">    
                     <li class="l-col col--sm-6" style="background-image: url('img/685x515.jpg');">
-                        <div class="m-eventsfeatured__details">
+                        <div class="eventsfeatured__details">
                              <hgroup class="hgroup--eventsfeatured__event-title">
-                                <h2 class="m-eventsfeatured__event-title">Zac Brown BandBand Band BandBandd</h2>
-                                <h2 class="m-eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
+                                <h2 class="eventsfeatured__event-title">Zac Brown BandBand Band BandBandd</h2>
+                                <h2 class="eventsfeatured__event-title--sub">feat. Chris Stapleton</h2>
 
                             </hgroup>
-                            <span class="m-eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
-                            <span class="m-eventsfeatured__event__venue">American Airlines Center</span>
-                            <span class="m-eventsfeatured__event__city">Dallas, TX</span>
+                            <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
+                            <span class="eventsfeatured__event__venue">American Airlines Center</span>
+                            <span class="eventsfeatured__event__city">Dallas, TX</span>
                             <button class="button button--emphasis">Details</button>
                         </div>
 
                     </li>
                     <li class="l-col col--sm-6" style="background-image: url('img/685x515.jpg');">
-                        <div class="m-eventsfeatured__details">
+                        <div class="eventsfeatured__details">
                             <hgroup class="hgroup--eventsfeatured__event-title">
-                                <h2 class="m-eventsfeatured__event-title">P!NK</h2>
-                                <h2 class="m-eventsfeatured__event-title--sub">with Alabama Shakes</h2>
+                                <h2 class="eventsfeatured__event-title">P!NK</h2>
+                                <h2 class="eventsfeatured__event-title--sub">with Alabama Shakes</h2>
                             </hgroup>
-                            <span class="m-eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
-                            <span class="m-eventsfeatured__event__venue">American Airlines Center</span>
-                            <span class="m-eventsfeatured__event__city">Dallas, TX</span>
+                            <span class="eventsfeatured__event__date">Saturday, July 25th, 8:00pm</span>
+                            <span class="eventsfeatured__event__venue">American Airlines Center</span>
+                            <span class="eventsfeatured__event__city">Dallas, TX</span>
                             <button class="button button--emphasis">Details</button>
                         </div>
                     </li>
                 </ul>
             
-                <ul class="l-container--rowwrap m-eventsfeatured m-eventsfeatured--small">
-                    <li class="l-col col--sm-4 m-eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                        <hgroup class="m-eventsfeatured__event-details">
-                            <h2 class="m-eventsfeatured__event-title">Event Title</h2>
-                            <h2 class="m-eventsfeatured__event-title--sub">Event Subtitle</h2>
+                <ul class="l-container--rowwrap eventsfeatured eventsfeatured--small">
+                    <li class="l-col col--sm-4 eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details">
+                            <h2 class="eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
                         </hgroup>
                     </li>
-                    <li class="l-col col--sm-4 m-eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                        <hgroup class="m-eventsfeatured__event-details">
-                            <h2 class="m-eventsfeatured__event-title">Event Title</h2>
-                            <h2 class="m-eventsfeatured__event-title--sub">Event Subtitle</h2>
+                    <li class="l-col col--sm-4 eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details">
+                            <h2 class="eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
                         </hgroup>
                     </li>
-                    <li class="l-col col--sm-4 m-eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
-                        <hgroup class="m-eventsfeatured__event-details">
-                            <h2 class="m-eventsfeatured__event-title">Event Title</h2>
-                            <h2 class="m-eventsfeatured__event-title--sub">Event Subtitle</h2>
+                    <li class="l-col col--sm-4 eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details">
+                            <h2 class="eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
                         </hgroup>
                     </li>
                 </ul>
@@ -116,8 +116,8 @@
             
             <section id="section--eventsearch">
                 <h1 class="text-reader-only">search and filter events</h1>
-                <div class="m--eventsearchwrap">
-                    <div class="m--eventsearch__filter">
+                <div class="eventsearchwrap">
+                    <div class="eventsearch__filter">
                          <form>
                             <label for="genre">Genre:</label> 
                             <select name="genre" id="genre">
@@ -138,7 +138,7 @@
                             <button type="submit" class="button button--light eventsearch__button">Find Events</button>
                         </form>
                     </div>
-                    <div class="m--eventsearch__search">
+                    <div class="eventsearch__search">
                         <input type="search" placeholder="Search events & arists"/>
                         <button type="submit" class="button button--light eventsearch__button">Search</button>
                     </div>
@@ -206,7 +206,7 @@
                 </ul>
             </section>
             
-            <section id="section--customcontent" class="section--padded">
+            <section class="section--custom section--padded">
                 <span class="text-fancy is-super">Discover new music and food</span>
                 <h1>Live It Up</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In placerat, dui vitae venenatis sodales, libero nisl mattis enim, non ultrices justo justo ac nibh. Morbi vel neque condimentum, mattis mauris nec, ultrices leo. Etiam vitae urna vel dolor tempor tincidunt. Vestibulum feugiat ex et ultricies efficitur. Nam mollis lectus eu tincidunt cursus.</p>
@@ -216,7 +216,7 @@
         
         <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded l-container--rowwrap">
         
-            <div class="footerbox footerbox--1">
+            <div class="l-col col--md-4 footerbox--1">
                 <h1 class="h3">Explore</h1>
                 <ul class="list-nostyle">
                     <li><a href="#">Home</a></li>
@@ -228,7 +228,7 @@
                 </ul>
             </div>
             
-            <div class="footerbox footerbox--2">
+            <div class="l-col col--md-4 footerbox--2">
                 <h1 class="h3">Hours</h1>
                  <span itemprop="openingHours" content="Mo,Tu,We,Th 11:00-23:00">
                      <dl>
@@ -244,7 +244,7 @@
                 </span>
             </div>
             
-            <div class="footerbox footerbox--3">
+            <div class="l-col col--md-4 footerbox--3">
                 <img src="inc/twlogo_whiteonblack.gif" width="50%" /> <br />
                 <span itemprop="name">TicketWeb Venue Club and Bar</span><br />
                 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">

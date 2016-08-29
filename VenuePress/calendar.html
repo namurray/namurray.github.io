@@ -51,8 +51,8 @@
             
             <div id="section--calendarsearch">
                 <h2 class="text-reader-only">search and filter events</h1>
-                <div class="m--eventsearchwrap">
-                    <div class="m--eventsearch__filter">
+                <div class="eventsearchwrap">
+                    <div class="eventsearch__filter">
                         <form>
                             <label for="genre">Genre:</label> 
                             <select name="genre" id="genre">
@@ -73,116 +73,237 @@
                             <button type="submit" class="button button--light eventsearch__button">Find Events</button>
                         </form>
                     </div>
-                    <div class="m--eventsearch__search">
+                    <div class="eventsearch__search">
                         <input type="search" placeholder="Search events & arists"/>
                         <button type="submit" class="button button--light eventsearch__button">Search</button>
                     </div>
                 </div>
             </div>
             
-            <section>
-                <div id="m--calendar--list">
-                    <ul class="m--calendarnav" role="navigation">
-                        <li class="m--calendarnav__month--prev"><a href="#">May</a></li>
-                        <li role="presentation"><h2 class="m--calendarnav__month--current h1">June 2016</h2></li>
-                        <li class="m--calendarnav__month--next"><a href="#">July</a></li>
-                    </ul>
-                    
-                    <hr />
+            <section id="calendar">
 
-                    <ul class="m--calendarview">
-                        <li class="m--calendarevent">
-                            <div class="m--calendarevent__date">
-                                <div class="m--calendarevent__date__container">
-                                    <span class="m--calendarevent__date__month">June</span>
-                                    <span class="m--calendarevent__date__dayno">1</span>
-                                    <span class="m--calendarevent__date__day">Thu</span>
-                                </div>
-                            </div>
-                            <div class="m--calendarevent__img">
-                                <img src="img/300x250.jpg" />
-                            </div>
-                            <div class="m--calendarevent__details">
-                                <span class="m--calendarevent__details__time">6pm (Doors 5pm)</span>
-                                <span class="m--calendarevent__details__artist">Blake Shelton</span>
-                                <span class="m--calendarevent__details__venue">at The Observatory</span>
-                            </div>
-                            <div class="m--calendarevent__button">
-                                <button class="button">Details</button>
-                            </div>
-                        </li>
-                        <li class="m--calendarevent">
-                            <div class="m--calendarevent__date">
-                                <div class="m--calendarevent__date__container">
-                                    <span class="m--calendarevent__date__month">June</span>
-                                    <span class="m--calendarevent__date__dayno">2</span>
-                                    <span class="m--calendarevent__date__day">Fri</span>
-                                </div>
-                            </div>
-                            <div class="m--calendarevent__img">
-                                <img src="img/300x250.jpg" />
-                            </div>
-                            <div class="m--calendarevent__details">
-                                <span class="m--calendarevent__details__time">6pm (Doors 5pm)</span>
-                                <span class="m--calendarevent__details__artist">Bruce Springsteen &amp; the E Street Band</span>
-                                <span class="m--calendarevent__details__venue">at Webster Hall</span>
-                            </div>
-                            <div class="m--calendarevent__button">
-                                <button class="button">Details</button>
-                            </div>
-                        </li>
-                        <li class="m--calendarevent">
-                            <div class="m--calendarevent__date">
-                                <div class="m--calendarevent__date__container">
-                                    <span class="m--calendarevent__date__month">June</span>
-                                    <span class="m--calendarevent__date__dayno">3</span>
-                                    <span class="m--calendarevent__date__day">Sat</span>
-                                </div>
-                            </div>
-                            <div class="m--calendarevent__img">
-                                <img src="img/300x250.jpg" />
-                            </div>
-                            <div class="m--calendarevent__details">
-                                <span class="m--calendarevent__details__time">6pm (Doors 5pm)</span>
-                                <span class="m--calendarevent__details__artist">Red Hot Chili Peppers</span>
-                                <span class="m--calendarevent__details__venue">at Caroline's on Broadway</span>
-                            </div>
-                            <div class="m--calendarevent__button">
-                                <button class="button">Details</button>
-                            </div>
-                        </li>
-                        <li class="m--calendarevent">
-                            <div class="m--calendarevent__date">
-                                <div class="m--calendarevent__date__container">
-                                    <span class="m--calendarevent__date__month">June</span>
-                                    <span class="m--calendarevent__date__dayno">3</span>
-                                    <span class="m--calendarevent__date__day">Sat</span>
-                                </div>
-                            </div>
-                            <div class="m--calendarevent__img">
-                                <img src="img/300x250.jpg" />
-                            </div>
-                            <div class="m--calendarevent__details">
-                                <span class="m--calendarevent__details__time">6pm (Doors 5pm)</span>
-                                <span class="m--calendarevent__details__artist">Lana del Rey</span>
-                                <span class="m--calendarevent__details__venue">at The Observatory</span>
-                            </div>
-                            <div class="m--calendarevent__button">
-                                <button class="button">Details</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </section>
-           
+                <div class="calendar__viewas hide-md">View as [X] [Y]</div>               
+                <ul class="calendarnav" role="navigation">
+                    <li class="calendarnav__month--prev"><a href="#">May</a></li>
+                    <li role="presentation"><h2 class="calendarnav__month--current h1">June 2016</h2></li>
+                    <li class="calendarnav__month--next"><a href="#">July</a></li>
+                </ul>
+                <hr />
                 
+                <ul class="calendar--list">
+                    <li class="calendarevent">
+                        <div class="calendarevent__date">
+                            <div class="calendarevent__date__container">
+                                <span class="calendarevent__date__month">June</span>
+                                <span class="calendarevent__date__dayno">1</span>
+                                <span class="calendarevent__date__day">Thu</span>
+                            </div>
+                        </div>
+                        <div class="calendarevent__img">
+                            <img src="img/300x250.jpg" />
+                        </div>
+                        <div class="calendarevent__details">
+                            <span class="calendarevent__details__time">6pm (Doors 5pm)</span>
+                            <span class="calendarevent__details__artist">Blake Shelton</span>
+                            <span class="calendarevent__details__venue">at The Observatory</span>
+                        </div>
+                        <div class="calendarevent__button">
+                            <button class="button">Details</button>
+                        </div>
+                    </li>
+                    <li class="calendarevent">
+                        <div class="calendarevent__date">
+                            <div class="calendarevent__date__container">
+                                <span class="calendarevent__date__month">June</span>
+                                <span class="calendarevent__date__dayno">2</span>
+                                <span class="calendarevent__date__day">Fri</span>
+                            </div>
+                        </div>
+                        <div class="calendarevent__img">
+                            <img src="img/300x250.jpg" />
+                        </div>
+                        <div class="calendarevent__details">
+                            <span class="calendarevent__details__time">6pm (Doors 5pm)</span>
+                            <span class="calendarevent__details__artist">Bruce Springsteen &amp; the E Street Band</span>
+                            <span class="calendarevent__details__venue">at Webster Hall</span>
+                        </div>
+                        <div class="calendarevent__button">
+                            <button class="button">Details</button>
+                        </div>
+                    </li>
+                    <li class="calendarevent">
+                        <div class="calendarevent__date">
+                            <div class="calendarevent__date__container">
+                                <span class="calendarevent__date__month">June</span>
+                                <span class="calendarevent__date__dayno">3</span>
+                                <span class="calendarevent__date__day">Sat</span>
+                            </div>
+                        </div>
+                        <div class="calendarevent__img">
+                            <img src="img/300x250.jpg" />
+                        </div>
+                        <div class="calendarevent__details">
+                            <span class="calendarevent__details__time">6pm (Doors 5pm)</span>
+                            <span class="calendarevent__details__artist">Red Hot Chili Peppers</span>
+                            <span class="calendarevent__details__venue">at Caroline's on Broadway</span>
+                        </div>
+                        <div class="calendarevent__button">
+                            <button class="button">Details</button>
+                        </div>
+                    </li>
+                    <li class="calendarevent">
+                        <div class="calendarevent__date">
+                            <div class="calendarevent__date__container">
+                                <span class="calendarevent__date__month">June</span>
+                                <span class="calendarevent__date__dayno">3</span>
+                                <span class="calendarevent__date__day">Sat</span>
+                            </div>
+                        </div>
+                        <div class="calendarevent__img">
+                            <img src="img/300x250.jpg" />
+                        </div>
+                        <div class="calendarevent__details">
+                            <span class="calendarevent__details__time">6pm (Doors 5pm)</span>
+                            <span class="calendarevent__details__artist">Lana del Rey</span>
+                            <span class="calendarevent__details__venue">at The Observatory</span>
+                        </div>
+                        <div class="calendarevent__button">
+                            <button class="button">Details</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <table class="calendar--grid">
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                    <tr>
+                        <td class="calendar__day--past"><span class="calendar__day__date">29</span></td>
+                        <td class="calendar__day--past"><span class="calendar__day__date">30</span></td>
+                        <td class="calendar__day--past"><span class="calendar__day__date">31</span></td>
+                        <td>
+                            <span class="calendar__day__date">1</span>
+                            <span class="">
+                                <span class="calendarevent__details__time">
+                                6pm</span>
+                                <span class="calendarevent__details__artist">
+                                Blake Shelton</span>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="calendar__day__date">2</span>
+                            <span class="">
+                                <span class="calendarevent__details__time">
+                                8pm</span>
+                                <span class="calendarevent__details__artist">
+                                Bruce Springsteen and the E Street Band</span>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="calendar__day__date">3</span>
+                            <span class="">
+                                <span class="calendarevent__details__time">
+                                8pm</span>
+                                <span class="calendarevent__details__artist">
+                               The Red Hot Chili Peppers</span>
+                            </span>
+                
+                             <span class="">
+                                <span class="calendarevent__details__time">
+                                10pm</span>
+                                <span class="calendarevent__details__artist">
+                                Lana del Ray</span>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="calendar__day__date">4</span>
+                            <span class="">
+                                <span class="calendarevent__details__time">
+                                8pm</span>
+                                <span class="calendarevent__details__artist">
+                                Florence and the Machine</span>
+                            </span>
+                            <span class="calendar__alert"><a>See 1 more event</a></span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td class="calendar__day--past">1</td>
+                        <td class="calendar__day--past">2</td>
+                    </tr>
+                </table>
+                </ul>
+                    
+                <ul class="calendarnav" role="navigation">
+                    <li class="calendarnav__month--prev"><a href="#">May</a></li>
+                    <li class="calendarnav__month--next"><a href="#">July</a></li>
+                </ul>
+            </section>
+            
+            <ul class="l-container--rowwrap eventsfeatured eventsfeatured--small">
+                    <li class="l-col col--sm-4 eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details">
+                            <h2 class="eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                        </hgroup>
+                    </li>
+                    <li class="l-col col--sm-4 eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details">
+                            <h2 class="eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                        </hgroup>
+                    </li>
+                    <li class="l-col col--sm-4 eventsfeatured__event" style="background-image: url('img/685x515.jpg');">
+                        <hgroup class="eventsfeatured__event-details">
+                            <h2 class="eventsfeatured__event-title">Event Title</h2>
+                            <h2 class="eventsfeatured__event-title--sub">Event Subtitle</h2>
+                        </hgroup>
+                    </li>
+                </ul>
+
         </article>
         </main>
         
-        <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded">
+                <footer itemscope itemtype="http://schema.org/MusicVenue" class="section--padded l-container--rowwrap">
         
-            <div class="footerbox footerbox--1">
+            <div class="l-col col--md-4 footerbox--1">
                 <h1 class="h3">Explore</h1>
                 <ul class="list-nostyle">
                     <li><a href="#">Home</a></li>
@@ -194,7 +315,7 @@
                 </ul>
             </div>
             
-            <div class="footerbox footerbox--2">
+            <div class="l-col col--md-4 footerbox--2">
                 <h1 class="h3">Hours</h1>
                  <span itemprop="openingHours" content="Mo,Tu,We,Th 11:00-23:00">
                      <dl>
@@ -210,7 +331,7 @@
                 </span>
             </div>
             
-            <div class="footerbox footerbox--3">
+            <div class="l-col col--md-4 footerbox--3">
                 <img src="inc/twlogo_whiteonblack.gif" width="50%" /> <br />
                 <span itemprop="name">TicketWeb Venue Club and Bar</span><br />
                 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">

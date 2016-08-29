@@ -35,15 +35,32 @@
     padding: 0 2em;
 }
 
-//GRID (reusable flex boxes)
+//12-COL GRID (reusable flex boxes)
+// container gets .l-container and boxes get .l-col .col--[size]-[#]
 
 $breakpoints: (
+    xs: $break-xsmall,
     sm: $break-small,
     md: $break-medium,
-    lg: $break-large
+    lg: $break-large,
+    xl: $break-xlarge,
 );
 
 $grid-columns: 12;
+
+.l-container {
+    &--rowwrap {
+        @include flexdisplay;
+        flex-flow: row wrap;
+        clear: both
+    }
+    &--rownowrap {
+        @include flexdisplay;
+        flex-flow: row nowrap;
+        clear: both
+    }
+}
+
 
 .l-col {
     flex-basis: 100%;
@@ -57,19 +74,6 @@ $grid-columns: 12;
                 flex-basis: ($i / $grid-columns) * 100%;
             }
         }
-    }
-}
-
-.l-container {
-    &--rowwrap {
-        @include flexdisplay;
-        flex-flow: row wrap;
-        clear: both
-    }
-    &--rownowrap {
-        @include flexdisplay;
-        flex-flow: row nowrap;
-        clear: both
     }
 }
 
@@ -88,7 +92,8 @@ $grid-columns: 12;
         margin-bottom: -65px;
         height: 60vh
     } @else {
-        height: 60vh
+        height: 60vh;
+        max-height:  420px
     }
 }
 
@@ -170,14 +175,15 @@ nav {
 }
 
 //Footer
+footer {
+    margin-top: 2.618rem
+}
 
 .footerbox {
-    width: 100%;
     &--1 {order: 1}
     &--2 {order: 2}
     &--3 {order: 3}
    @include breakpoint($break-small) {
-        width: 33%;
         &--1 {order: 2}
         &--2 {order: 3}
         &--3 {order: 1}

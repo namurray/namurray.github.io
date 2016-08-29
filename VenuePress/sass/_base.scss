@@ -75,8 +75,7 @@ a:hover {
     color: lighten( $color-text, 40% );
 }
 .eventlist__title__presents {
-    font-family: $font-secondary;
-    font-style: italic
+   @extend .text-fancy;
 }
 .eventlist__title__act {
     text-transform: uppercase;

@@ -1,4 +1,4 @@
-//Reusable modules like search forms and buttons
+//Reusable modules like searchforms, widgets, and buttons
 
 input {
     background-color: $input-color;
@@ -48,7 +48,7 @@ label {
 }
 
 //Featured Events
-.m-eventsfeatured {
+.eventsfeatured {
     color: $color-contrast;
     text-align: center;
     li {
@@ -57,7 +57,7 @@ label {
         position: relative;
     }
 }
-.m-eventsfeatured__details {
+.eventsfeatured__details {
     overflow: hidden;
     position: absolute;
     bottom: 0;
@@ -88,14 +88,14 @@ label {
     }
 }
 
-.m-eventsfeatured__event-title {
+.eventsfeatured__event-title {
     @extend h1; 
     &--sub {
         font-family: $font-primary;
         text-transform: none;
     }
 }
-.m-eventsfeatured__event{
+.eventsfeatured__event{
     &__date, &__venue, &__city{
         display: block;
         font-size: 2rem
@@ -109,7 +109,7 @@ label {
 }
 
 
-.m-eventsfeatured--small {
+.eventsfeatured--small {
     li {
         height: 300px;
     }
@@ -119,7 +119,7 @@ label {
         width: 100%;
         text-align: center;
     }
-    .m-eventsfeatured__event-title {
+    .eventsfeatured__event-title {
         font-size: 2.618rem;
         font-family: $font-primary--bold;
         &--sub {
@@ -130,7 +130,7 @@ label {
 }
 
 //Event Search & Filter
-.m--eventsearchwrap {
+.eventsearchwrap {
     @include flexdisplay;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +142,7 @@ label {
         display: inline-block
     }
 }
-.m--eventsearch__filter {
+.eventsearch__filter {
     width: 100%;
      @include breakpoint ($break-medium){
         width: auto;
@@ -166,7 +166,7 @@ label {
         }
    }
 }
-.m--eventsearch__search {
+.eventsearch__search {
     margin: 0 0.618rem 1.618rem;
     @include breakpoint ($break-xlarge){
         margin: 0
@@ -181,8 +181,7 @@ label {
 
 //Calendar (list)
 $block-size: 110px;
-
-#m--calendar--list {
+#calendar {
     width: 95%;
     margin: 1rem auto;
     @include breakpoint ($break-small) {
@@ -193,33 +192,19 @@ $block-size: 110px;
         margin: 2.618rem 0 4.236rem
     }
 }
-.m--calendarnav {
-    @include flexdisplay;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: baseline;
-    li a {
-        color: inherit;
-        text-transform: uppercase;
-        font-family: $font-primary--bold
-    }
+.calendar__viewas {
+    float: right;
+    font-family: $font-primary--bold;
+    text-transform: uppercase;
+    font-size: 1.3rem
 }
-.m--calendarnav__month--current {
-    text-align: center
-}
-.m--calendarnav__month--prev:before {
-    content:'<< '
-}
-.m--calendarnav__month--next:after {
-    content: ' >>'
-}
-
-.m--calendarview {
+.calendar--list {
+    clear: both;
     max-width: 575px;
     margin: 0 auto
+    
 }
-.m--calendarevent {
+.calendarevent {
     @include flexdisplay;
     flex-direction: row;
     align-items: center;
@@ -229,7 +214,7 @@ $block-size: 110px;
         flex-wrap: nowrap
     }
 }
-.m--calendarevent__date {
+.calendarevent__date {
     text-align: center;
     width: 100%;
     background: $color-secondary;
@@ -270,9 +255,9 @@ $block-size: 110px;
         margin-bottom: 0;
     }
 }
-.m--calendarevent__img {
+.calendarevent__img {
     display: inline-block;
-    width: 30%;
+    width: 25%;
     img {
         @include breakpoint ($break-small) {
             height: $block-size;
@@ -280,16 +265,13 @@ $block-size: 110px;
         }
     }
 }
-.m--calendarevent__details {
+.calendarevent__details {
     width: 70%;
     padding: 0 .618rem;
     display: inline-block;
-    > span {
-        display: block
-    }
     &__time, &__venue {
-        font-family: $font-secondary;
-        font-style: italic
+        @extend .text-fancy;
+        display: block
     }
     &__venue {
         color: $color-secondary
@@ -297,17 +279,68 @@ $block-size: 110px;
     &__artist {
         text-transform: uppercase;
         font-size: 1.618rem;
+        display: block
     }
     @include breakpoint ($break-small) {
-        width: 40%;
+        width: 45%;
     }
 }
-.m--calendarevent__button {
+.calendarevent__button {
     width: 100%;
     flex: auto;
     margin-top: 0.382rem;
     @include breakpoint ($break-small) {
         width: auto;
         margin: 0;
+    }
+}
+
+
+.calendar--grid {
+    width: 100%;
+    @media (max-width: $break-medium){
+        display: none
+    }
+    td {
+        height: 250px;
+        width: 14.27%;
+        vertical-align: top;
+        > span {
+            display: block
+        }
+    }
+}
+.calendar__day--past{
+    background-color: #aaa
+}
+
+
+.calendarnav {
+    @include flexdisplay;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    li a {
+        color: inherit;
+        text-transform: uppercase;
+        font-family: $font-primary--bold
+    }
+}
+.calendarnav__month--current {
+    text-align: center
+}
+.calendarnav__month--prev:before {
+    content:'<< '
+}
+.calendarnav__month--next:after {
+    content: ' >>'
+}
+
+.calendar__alert a {
+    @extend .text-fancy;
+    color: $color-tertiary;
+    &:after {
+        content: ' >>'
     }
 }
