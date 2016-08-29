@@ -108,7 +108,7 @@
                             <span class="calendarevent__details__venue">at The Observatory</span>
                         </div>
                         <div class="calendarevent__button">
-                            <button class="button">Details</button>
+                            <a class="button">Details</a>
                         </div>
                     </li>
                     <li class="calendarevent">
@@ -128,7 +128,7 @@
                             <span class="calendarevent__details__venue">at Webster Hall</span>
                         </div>
                         <div class="calendarevent__button">
-                            <button class="button">Details</button>
+                            <a class="button">Details</a>
                         </div>
                     </li>
                     <li class="calendarevent">
@@ -173,102 +173,193 @@
                     </li>
                 </ul>
                 
-                <table class="calendar--grid">
-                    <tr>
-                        <th>Sunday</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                        <th>Saturday</th>
-                    </tr>
-                    <tr>
-                        <td class="calendar__day--past"><span class="calendar__day__date">29</span></td>
-                        <td class="calendar__day--past"><span class="calendar__day__date">30</span></td>
-                        <td class="calendar__day--past"><span class="calendar__day__date">31</span></td>
-                        <td>
-                            <span class="calendar__day__date">1</span>
-                            <span class="">
-                                <span class="calendarevent__details__time">
-                                6pm</span>
-                                <span class="calendarevent__details__artist">
-                                Blake Shelton</span>
-                            </span>
-                        </td>
-                        <td>
-                            <span class="calendar__day__date">2</span>
-                            <span class="">
-                                <span class="calendarevent__details__time">
-                                8pm</span>
-                                <span class="calendarevent__details__artist">
-                                Bruce Springsteen and the E Street Band</span>
-                            </span>
-                        </td>
-                        <td>
-                            <span class="calendar__day__date">3</span>
-                            <span class="">
-                                <span class="calendarevent__details__time">
-                                8pm</span>
-                                <span class="calendarevent__details__artist">
-                               The Red Hot Chili Peppers</span>
-                            </span>
-                
-                             <span class="">
-                                <span class="calendarevent__details__time">
-                                10pm</span>
-                                <span class="calendarevent__details__artist">
-                                Lana del Ray</span>
-                            </span>
-                        </td>
-                        <td>
-                            <span class="calendar__day__date">4</span>
-                            <span class="">
-                                <span class="calendarevent__details__time">
-                                8pm</span>
-                                <span class="calendarevent__details__artist">
-                                Florence and the Machine</span>
-                            </span>
-                            <span class="calendar__alert"><a>See 1 more event</a></span>
-                        </td>
-                    </tr>
-                     <tr>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                    </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>26</td>
-                        <td>27</td>
-                        <td>28</td>
-                        <td>29</td>
-                        <td>30</td>
-                        <td class="calendar__day--past">1</td>
-                        <td class="calendar__day--past">2</td>
-                    </tr>
-                </table>
+    
+                <ul class="calendar--grid" cellspacing="2px">
+                    <li role="presentation">Monday</li>
+                    <li role="presentation">Tuesday</li>
+                    <li role="presentation">Wednesday</li>
+                    <li role="presentation">Thursday</li>
+                    <li role="presentation">Friday</li>
+                    <li role="presentation">Saturday</li>
+                    <li role="presentation">Sunday</li>
+                    <li class="calendarevent--past"><span class="calendarevent__day">29</span></li>
+                    <li class="calendarevent--past"><span class="calendarevent__day">30</span></li>
+                    <li class="calendarevent--past"><span class="calendarevent__day">31</span></li>
+                    <li>
+                        <span class="calendarevent__day">1</span>
+                        <span class="calendarevent--grid__act" style="background-image:url('img/300x400.jpg')">
+                            <span class="calendarevent__details__time">
+                            6pm</span>
+                            <span class="calendarevent__details__artist">
+                            Blake Shelton</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="calendarevent__day">2</span>
+                        <span class="calendarevent--grid__act" style="background-image:url('img/300x400.jpg')">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Bruce Springsteen and the E Street Band</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="calendarevent__day">3</span>
+                        <span class="calendarevent--grid__act" style="background-image:url('img/300x400.jpg')">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                           The Red Hot Chili Peppers</span>
+                        </span>
+                        <span class="calendarevent--grid__act" style="background-image:url('img/300x400.jpg')">
+                            <span class="calendarevent__details__time">
+                            10pm</span>
+                            <span class="calendarevent__details__artist">
+                            Lana del Ray</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="calendarevent__day">4</span>
+                        <span class="calendarevent--grid__act" style="background-image:url('img/300x400.jpg')">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Florence and the Machine</span>
+                        </span>
+                        <span class="calendar__alert"><a>See 1 more event</a></span>
+                    </li>
+
+                    <li><span class="calendarevent__day">5</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            3pm</span>
+                            <span class="calendarevent__details__artist">
+                            Leon Bridges</span>
+                        </span>
+                    </li>
+                    <li><span class="calendarevent__day">6</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            4pm</span>
+                            <span class="calendarevent__details__artist">
+                            Nathaniel Rateliff and</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">7</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            6pm</span>
+                            <span class="calendarevent__details__artist">
+                            Bushy one String and the</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">8</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            6pm</span>
+                            <span class="calendarevent__details__artist">
+                            Selena Gomez feat. Arianna Grande</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">9</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            6pm</span>
+                            <span class="calendarevent__details__artist">
+                            CHVRCHES with Mumford and Sons</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">10</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Guns N' Roses</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">11</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Aerosmith</span>
+                        </span>
+                     </li>
+
+                    <li><span class="calendarevent__day">12</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Aerosmith</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">13</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            J. Cole</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">14</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Drake feat. Future and Wixxx</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">15</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Louis C.K.</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">16</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Sturgil Simpson with Alambama Shakes</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">17</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            6pm</span>
+                            <span class="calendarevent__details__artist">
+                            Brandy Carlsile</span>
+                        </span>
+                     </li>
+                    <li><span class="calendarevent__day">18</span>
+                        <span class="calendarevent--grid__act">
+                            <span class="calendarevent__details__time">
+                            8pm</span>
+                            <span class="calendarevent__details__artist">
+                            Streetz Beetz Hip-Hop Battle</span>
+                        </span>
+                     </li>
+
+                    <li><span class="calendarevent__day">19</span></li>
+                    <li><span class="calendarevent__day">20</span></li>
+                    <li><span class="calendarevent__day">21</span></li>
+                    <li><span class="calendarevent__day">22</span></li>
+                    <li><span class="calendarevent__day">23</span></li>
+                    <li><span class="calendarevent__day">24</span></li>
+                    <li><span class="calendarevent__day">25</span></li>
+
+                    <li><span class="calendarevent__day">26</span></li>
+                    <li><span class="calendarevent__day">27</span></li>
+                    <li><span class="calendarevent__day">28</span></li>
+                    <li><span class="calendarevent__day">29</span></li>
+                    <li><span class="calendarevent__day">30</span></li>
+                    <li class="calendarevent--past"><span class="calendarevent__day">1</span></li>
+                    <li class="calendarevent--past"><span class="calendarevent__day">2</span></li>
+
                 </ul>
                     
                 <ul class="calendarnav" role="navigation">

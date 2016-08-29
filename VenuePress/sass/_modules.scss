@@ -22,6 +22,7 @@ label {
     background-color: $button-color--standard;
     color: $button-text-color;
     text-transform: uppercase;
+    text-align: center;
     font-family: $font-primary--bold;
     min-width: 115px;
     &--higlight {
@@ -45,7 +46,11 @@ label {
         background-color: rgba(255, 255, 255, .8);
         color: #fff
     }
+    &:hover {
+        color: #fff
+    }
 }
+
 
 //Featured Events
 .eventsfeatured {
@@ -206,16 +211,24 @@ $block-size: 110px;
 }
 .calendarevent {
     @include flexdisplay;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    background: #eee;
+    padding: 5% 10%;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
     margin-bottom: .618rem;
     @include breakpoint ($break-small) {
-        flex-wrap: nowrap
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: none;
+        padding: 0;
+        max-width: none
     }
 }
 .calendarevent__date {
-    text-align: center;
     width: 100%;
     background: $color-secondary;
     color: #fff;
@@ -257,20 +270,20 @@ $block-size: 110px;
 }
 .calendarevent__img {
     display: inline-block;
-    width: 25%;
+    margin: 0 auto;
     img {
         @include breakpoint ($break-small) {
             height: $block-size;
-            width: auto;
         }
     }
 }
 .calendarevent__details {
-    width: 70%;
     padding: 0 .618rem;
     display: inline-block;
+    margin: 0 auto;
     &__time, &__venue {
         @extend .text-fancy;
+        font-size: 1.3rem;
         display: block
     }
     &__venue {
@@ -279,16 +292,20 @@ $block-size: 110px;
     &__artist {
         text-transform: uppercase;
         font-size: 1.618rem;
-        display: block
+        display: block;
     }
     @include breakpoint ($break-small) {
         width: 45%;
+        text-align: left
     }
 }
 .calendarevent__button {
     width: 100%;
     flex: auto;
     margin-top: 0.382rem;
+    > button {
+        margin: 0 auto
+    }
     @include breakpoint ($break-small) {
         width: auto;
         margin: 0;
@@ -298,23 +315,48 @@ $block-size: 110px;
 
 .calendar--grid {
     width: 100%;
+    @include flexdisplay;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+        width: 13.5%;
+        height: 250px;
+        margin: .3rem;
+        @include flexdisplay;
+        flex-direction: column;
+        position: relative;
+        &[role=presentation] {
+            height: auto;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: $font-primary--bold
+        }
+    }
     @media (max-width: $break-medium){
         display: none
     }
-    td {
-        height: 250px;
-        width: 14.27%;
-        vertical-align: top;
-        > span {
-            display: block
-        }
-    }
 }
-.calendar__day--past{
+.calendarevent__day {
+    position: absolute;
+    top: 0;
+    left: 5px
+}
+.calendarevent--past{
     background-color: #aaa
 }
-
-
+.calendarevent--grid__act {
+    background-size: cover;
+    flex: 1;
+    > .calendarevent__details__artist{
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 1.5rem
+    }
+}
 .calendarnav {
     @include flexdisplay;
     flex-direction: row;
