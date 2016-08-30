@@ -44,8 +44,9 @@ font-family:"Montserrat Bold";
 //@import url('');
 
 //Declare fonts
-$font-primary: 'Montserrat Light', sans-serif;
-$font-primary--bold: 'Montserrat Regular';
+$font-light: 'Montserrat Light';
+$font-primary: 'Montserrat Regular', sans-serif;
+$font-primary--bold: 'Montserrat Bold';
 $font-primary--xbold: 'Montserrat Bold';
 $font-secondary: 'Georgia', serif;
 
@@ -65,7 +66,8 @@ strong {
 
 //Text and links
 
-$header-font: $font-primary--xbold;
+$header-font: $font-primary--bold;
+$header-font--small: $font-light; //h3s and h4s
 
 $link-color: $color-secondary;
 $link-color--hover: $color-secondary;
@@ -79,11 +81,11 @@ $button-text-color: #fff;
 
 
 // Header Elements & Navigation
-$header-position: fixed; //fixed|static
+$header-position: static; //fixed|static
 $header-direction: row; //select row|column
 
 $menu-position: 2; //if $header-direction == row: 1 for left, 2 for right; if == column, 1 for top 2 for bottom
-$menu-font-family: $font-primary--bold; //select from variables or a new value
+$menu-font-family: $font-primary; //select from variables or a new value
 $menu-font-size: 1.4rem; //use rems
 $menu-font-transform: uppercase; //select uppercase|none|lowercase
 $menu-link-color: #fff; //select from variables or a new value

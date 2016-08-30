@@ -17,13 +17,13 @@ h1, .h1 {
     }
 }
 h2, .h2 {
-    font-size: 2.618rem;
+    font-size: 4.236rem;
     text-transform: uppercase;
     font-family: $header-font;
 }
 h3, .h3 {
-    font-size: 1.618rem;
-    font-family: $header-font;
+    font-size: 2.618rem;
+    font-family: $header-font--small;
 }
 
 a:link, a:visited {
@@ -36,7 +36,6 @@ a:hover {
 //HEADER & MAIN MENU
 
 .mainmenu {
-    list-style-type: none;
     li {
         font-family: $menu-font-family;
         font-size: $menu-font-size;
@@ -79,7 +78,8 @@ a:hover {
 }
 .eventlist__title__act {
     text-transform: uppercase;
-    font-size: 2.618em
+    font-size: 2.618em;
+    font-family: $font-light
 }
 .eventlist__title__subtitle {
     font-family: $font-primary--bold;
@@ -88,6 +88,9 @@ a:hover {
 }
 .eventlist__details__date {
     font-family: $font-primary--bold
+}
+.eventlist__details__time {
+    font-family: $font-light
 }
 .eventlist__details__venue, .eventlist__details__city {
     color: lighten($color-secondary, 10%);

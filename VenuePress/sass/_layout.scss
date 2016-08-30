@@ -128,6 +128,8 @@ nav {
     order: $menu-position;
 }
 .mainmenu {
+    list-style-type: none;
+    z-index: 10;
     @if $header-direction == 'row' {
         position: absolute;
         top: 10px;
@@ -137,16 +139,16 @@ nav {
             left: 10px
         }   
     }
-
-    
     li {
         display:inline-block;
         &:nth-child(3) {
             cursor: pointer;
             padding: 0;
             &:hover {
-                padding: 150px;
-                margin: -150px;
+                padding: 10px;
+                padding-bottom: 150px;
+                margin: -10px;
+                margin-bottom: -150px;
                 position: relative;
                 z-index: 1;
                 outline: none;
