@@ -26,8 +26,11 @@
     font-size: 4.236rem; 
     text-transform: uppercase
 }
-.is-super{margin-bottom: -.5em}
+.is-super{line-height: .8}
 .is-sub {margin-top: -.2em}
+.is-mega {
+    font-size: $scale-3
+}
 
 //States
 

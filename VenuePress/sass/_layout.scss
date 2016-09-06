@@ -32,7 +32,7 @@
 //Alignment
 .align-center {display: block; margin: 0 auto}
 .section--padded {
-    padding: 0 2em;
+    padding: $scale-3;
 }
 
 //12-COL GRID (reusable flex boxes)
@@ -49,19 +49,10 @@ $breakpoints: (
 $grid-columns: 12;
 
 .l-container {
-    &--rowwrap {
         @include flexdisplay;
         flex-flow: row wrap;
         clear: both
-    }
-    &--rownowrap {
-        @include flexdisplay;
-        flex-flow: row nowrap;
-        clear: both
-    }
 }
-
-
 .l-col {
     flex-basis: 100%;
     flex-grow: 0;
@@ -95,6 +86,11 @@ $grid-columns: 12;
         height: 60vh;
         max-height:  420px
     }
+    @include bg-cover;
+    @include flexdisplay;
+    * {
+        margin: auto
+    }
 }
 
 //Header
@@ -109,12 +105,12 @@ header {
     align-items: center;
     z-index: 1;
     @if $header-position == 'fixed' {
-        margin-bottom: 2rem
+        margin-bottom: $scale-3;
     }
 }
 .header__logo {
     max-width: 150px;
-    margin: 1rem 0 0 1rem;
+    margin: $scale-1 0 0 $scale-1;
     @if $menu-position == 1 {
         order: 2
     } @else {
@@ -155,7 +151,7 @@ nav {
             }
             &:focus ~ li, &:hover ~ li {
               opacity: 1;
-              height: 2.618rem;
+              height: $scale-2;
             }
             @include breakpoint ($break-small){
                 display: none;
@@ -178,7 +174,7 @@ nav {
 
 //Footer
 footer {
-    margin-top: 2.618rem
+    margin-top: $scale-3;
 }
 
 .footerbox {
@@ -266,7 +262,7 @@ footer {
         float: left;
         flex-grow: 1;
         align-self: center;
-         padding: 0 1rem;
+         padding: 0 $scale-1;
          @include breakpoint ($break-small){
             padding: 0
          }
@@ -290,9 +286,37 @@ footer {
 }
 .eventlist__button  {
     width: 100%;
-    margin: 1.618rem 0;
+    margin: $scale-2 0;
     @include breakpoint ($break-small){
         width: auto;
         margin: 0
          }
+}
+
+//Section: Calendar
+
+#section--calendarsearch {
+    padding: $scale-2 0
+}
+
+//Section: Event Detail Page
+.eventpage__tickets {
+    text-align: center;
+    background-size: cover;
+    padding: $scale-4;
+    > div {
+        margin: auto
+    }
+}
+.eventpage__about--container {
+    justify-content: center
+}
+.eventpage__asides {
+    @include breakpoint ($break-small) {
+        margin-left: $scale-3;
+    }
+}
+
+.eventpage__details > span {
+    display: block
 }

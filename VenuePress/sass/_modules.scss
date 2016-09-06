@@ -25,24 +25,24 @@ label {
     text-align: center;
     font-family: $font-primary--bold;
     min-width: 115px;
-    &--higlight {
+    &--highlight {
         background-color: lighten($button-color--standard, 50%);
     }
     &--emphasis {
         background-color: $color-tertiary;
-        padding: 1rem 2.1618rem;
+        padding: $scale-1 $scale-3;
     }
     &--light {
         font-family: $font-primary;
         text-transform: none
     }
     &--fancy--light {
-            font-size: 2.618rem;
+            font-size: $scale-3;
              background-color: rgba(0, 0, 0, .4);
             color: #000
         }
     &--fancy--dark {
-        font-size: 2.618rem;
+        font-size: $scale-3;
         background-color: rgba(255, 255, 255, .8);
         color: #fff
     }
@@ -79,8 +79,8 @@ label {
         }
    }
     & > hgroup {
-        margin-bottom: 1rem;
-        margin-top: 2.618rem;
+        margin-bottom: $scale-1;
+        margin-top: $scale-3;
         }
     &--small {
         bottom: 10px
@@ -106,10 +106,10 @@ label {
         font-size: 2rem
     }
     &__date {
-        font-size: 2.618rem
+        font-size: $scale-3
     }
     &__city {
-        margin-bottom: 1.618rem
+        margin-bottom: $scale-2
     }
 }
 
@@ -127,7 +127,7 @@ label {
     .eventsfeatured__event-title {
         @extend h3;
         &--sub {
-            font-size: 1.618rem;
+            font-size:  $scale-2;
         }
     }
 }
@@ -149,10 +149,10 @@ label {
     width: 100%;
      @include breakpoint ($break-medium){
         width: auto;
-         margin-right: 2.618rem;
+         margin-right: $scale-3;
      }
     form {
-        margin: 0.618rem; 
+        margin: $scale-0; 
          @include breakpoint ($break-xlarge){
             margin: 0
         }
@@ -162,7 +162,7 @@ label {
     }
     button {
         width: 100%;
-        margin-top: 0.618rem;
+        margin-top: $scale-0;
         @include breakpoint ($break-xsmall){
             width: auto;
             margin: 0
@@ -170,7 +170,7 @@ label {
    }
 }
 .eventsearch__search {
-    margin: 0 0.618rem 1.618rem;
+    margin: 0 $scale-0 $scale-2;
     @include breakpoint ($break-xlarge){
         margin: 0
     }
@@ -186,13 +186,13 @@ label {
 $block-size: 110px;
 #calendar {
     width: 95%;
-    margin: 1rem auto;
+    margin: $scale-1 auto;
     @include breakpoint ($break-small) {
-         margin: 2.6rem auto;
+         margin: $scale-3 auto;
         width: 95%;
     }
     hr {
-        margin: 2.618rem 0 4.236rem
+        margin: $scale-3 0 $scale-4
     }
 }
 .calendar__viewas {
@@ -217,7 +217,7 @@ $block-size: 110px;
     text-align: center;
     max-width: 300px;
     margin: 0 auto;
-    margin-bottom: .618rem;
+    margin-bottom: $scale-0;
     @include breakpoint ($break-small) {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -251,7 +251,7 @@ $block-size: 110px;
     }
     &__dayno {
         @include breakpoint ($break-small){
-            font-size: 4.236rem;
+            font-size: $scale-4;
             font-family: $font-primary--xbold
         }
     }
@@ -276,7 +276,7 @@ $block-size: 110px;
     }
 }
 .calendarevent__details {
-    padding: 0 .618rem;
+    padding: 0  $scale-0;
     display: inline-block;
     margin: 0 auto;
     &__time, &__venue {
@@ -289,7 +289,7 @@ $block-size: 110px;
     }
     &__artist {
         text-transform: uppercase;
-        font-size: 1.618rem;
+        font-size: $scale-2;
         display: block;
     }
     @include breakpoint ($break-small) {

@@ -13,17 +13,21 @@ h1, .h1 {
     text-transform: uppercase;
     font-family: $header-font;
     @include breakpoint ($break-small){
-        font-size: 6.854rem;   
+        font-size: $scale-5;   
     }
 }
 h2, .h2 {
-    font-size: 4.236rem;
+    font-size: $scale-4;
     text-transform: uppercase;
     font-family: $header-font;
 }
 h3, .h3 {
-    font-size: 2.618rem;
+    font-size: $scale-3;
     font-family: $header-font--small;
+}
+h4, .h4 {
+    font-size: $scale-2;
+    text-transform: none;
 }
 
 a:link, a:visited {
@@ -65,7 +69,7 @@ a:hover {
 }
 #section--eventsearch {
     background-color: #eee;
-    padding: 1.618rem 0;
+    padding: $scale-2 0;
     clear: both
 }
 
@@ -101,8 +105,18 @@ a:hover {
     font-size: .8em
 }
 
-@import 'calendar';
+//Event Page
 
+.eventpage__details {
+    font-family: $font-light
+}
+.eventpage__details__time {
+    text-transform: uppercase;
+    font-size: $scale-3
+}
+.eventpage__aside > p {
+    font-size: 1.4rem
+}
 //COMPONENTS
 
 //Slider
